@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shehuinizhongge.github.io/</id>
     <title>HOME</title>
-    <updated>2019-06-16T11:33:03.164Z</updated>
+    <updated>2019-06-16T11:57:01.124Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shehuinizhongge.github.io/"/>
     <link rel="self" href="https://shehuinizhongge.github.io//atom.xml"/>
@@ -10,4 +10,15 @@
     <logo>https://shehuinizhongge.github.io//images/avatar.png</logo>
     <icon>https://shehuinizhongge.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, HOME</rights>
+    <entry>
+        <title type="html"><![CDATA[如何快速的寻找到你想要的资源]]></title>
+        <id>https://shehuinizhongge.github.io//post/ru-he-kuai-su-de-xun-zhao-dao-ni-xiang-yao-de-zi-yuan</id>
+        <link href="https://shehuinizhongge.github.io//post/ru-he-kuai-su-de-xun-zhao-dao-ni-xiang-yao-de-zi-yuan">
+        </link>
+        <updated>2019-06-16T11:42:57.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>这是一个数字化的时代，一个快节奏的时代，多快好省一定是主流</strong></p>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>这是一个数字化的时代，一个快节奏的时代，多快好省一定是主流</strong></p>
+]]></content>
+    </entry>
 </feed>
