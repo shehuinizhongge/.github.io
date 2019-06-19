@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>关于线性时不变连续信号处理中的“冲击响应”计算问题 | 瞎扯</title>
+<link rel="shortcut icon" href="https://shehuinizhongge.github.io//favicon.ico?v=1560943328292">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://shehuinizhongge.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://shehuinizhongge.github.io/">
+  <img class="avatar" src="https://shehuinizhongge.github.io//images/avatar.png?v=1560943328292" alt="">
+  </a>
+  <h1 class="site-title">
+    瞎扯
+  </h1>
+  <p class="site-description">
+    一个没事干自己瞎扯的地方
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://shehuinizhongge.github.io/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://shehuinizhongge.github.io//post/about-me/" class="menu">
+          关于我
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              关于线性时不变连续信号处理中的“冲击响应”计算问题
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-06-19 ·
+              </time>
+              
+            </div>
+            
+              <div class="post-feature-image" style="background-image: url('https://shehuinizhongge.github.io//post-images/guan-yu-xian-xing-shi-bu-bian-lian-xu-xin-hao-chu-li-zhong-de-chong-ji-xiang-ying-ji-suan-wen-ti.gif')">
+              </div>
+            
+            <div class="post-content">
+              <p>阶跃响应和冲激响应似乎是信号处理中很重要的两个东西，大部分时间老师都是带着推公式，背公式，带公式计算。但是为什么要这样推公式？为什么这样做行得通？</p>
+<!-- more -->
+<p><code>我的教材是**信号与线性系统分析吴大正第四版**，由于本科阶段学识有限，仅代表个人观点。</code></p>
+<h2 id="关于线性的一些理解">关于“线性”的一些理解</h2>
+<p>首先我们来看看比较重要的&quot;线性时不变系统&quot;:所谓线性时不变系统,首先要线性,然后要时不变:所谓线性,指的是如果任意输入x输入系统得到y, 那么xk输入系统,应该得到yk,比如,&quot;乘100&quot;就是个线性系统,因为例如以5为输入得到输出500,而56为输入得到3000 == 51006. 而&quot;平方&quot;则不是线性系统,因为以5为输入得到25,而56得到的结果是3030 != 556.线性时不变系统的另一个特性就是叠加性, 即假如x进入系统得到结果f(x), 那么若x=a+b,必有f(x) = f(a) + f(b). 还有就是时不变,时不变指的是若一个输入x得到信号y,那么一个经过了延迟的x得到的也只是一个被延迟过的y.而不能是其他值。
+也就是说，我们不需要让这所有信号都输入系统,由于线性时不变,我们只需要写出信号中任意一个信号，然后进行归一化,对齐到0时刻,进入系统,再对输出乘以不同系数,延迟不同时间,就得到了所有的输出。
+<strong>而在用经典法求冲击响应和阶跃响应时，恰好是用了这一性质。</strong></p>
+<h2 id="冲击响应的一个重要性质">冲击响应的一个重要性质</h2>
+<p>在知道了以上内容后，就要拿来求冲击响应了。一般我们会拿到这样的一个题。
+y''(t)+5y'(t)+6y(t)=2f(t)+3f'(t)
+然后要求出冲击响应。
+在书上有个重要的性质，如果右侧只含f(t)，那么可以让f(t)=δ(t)，左侧全变成h(t)。然后求特征方程，即可解出冲击响应。
+那么如果右侧不只是f(t)，就可以假设出新的y1(t),f1(t)。让新的式子右侧只有f1(t)，左侧按照原式的系数写出。然后就能求出h1(t)。再根据线性的特点，H(t)=2h1(t)+3h'1(t)。从方程中也看出来，系数是原式右侧的系数。这样就能计算出冲击响应，而阶跃响应可以由冲击响应直接积分得到。</p>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://shehuinizhongge.github.io//post/ru-he-kuai-su-de-xun-zhao-dao-ni-xiang-yao-de-zi-yuan">
+              <h3 class="post-title">
+                如何快速的寻找到你想要的资源
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  每日一一口毒鸡汤 | 
+  <a class="rss" href="https://shehuinizhongge.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
