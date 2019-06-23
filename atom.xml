@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shehuinizhongge.github.io/</id>
     <title>瞎扯</title>
-    <updated>2019-06-19T11:23:01.393Z</updated>
+    <updated>2019-06-23T09:14:10.047Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shehuinizhongge.github.io/"/>
     <link rel="self" href="https://shehuinizhongge.github.io//atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://shehuinizhongge.github.io//images/avatar.png</logo>
     <icon>https://shehuinizhongge.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, 瞎扯</rights>
+    <entry>
+        <title type="html"><![CDATA[小度智能音箱体验]]></title>
+        <id>https://shehuinizhongge.github.io//post/xiao-du-zhi-neng-yin-xiang-ti-yan</id>
+        <link href="https://shehuinizhongge.github.io//post/xiao-du-zhi-neng-yin-xiang-ti-yan">
+        </link>
+        <updated>2019-06-23T08:25:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>小度智能音箱搭载了百度对话式人工智能操作系统DuerOS，拥有超过1000万小时的海量有声内容，400多项生活常用技能。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>小度智能音箱搭载了百度对话式人工智能操作系统DuerOS，拥有超过1000万小时的海量有声内容，400多项生活常用技能。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于线性时不变连续信号处理中的“冲击响应”计算问题]]></title>
         <id>https://shehuinizhongge.github.io//post/guan-yu-xian-xing-shi-bu-bian-lian-xu-xin-hao-chu-li-zhong-de-chong-ji-xiang-ying-ji-suan-wen-ti</id>
