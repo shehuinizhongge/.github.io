@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>关于线性时不变连续信号处理中的“冲击响应”计算问题 | 瞎扯</title>
-<link rel="shortcut icon" href="https://xyzAI.github.io//favicon.ico?v=1561525304435">
+<link rel="shortcut icon" href="https://xyzAI.github.io//favicon.ico?v=1561525792743">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://xyzAI.github.io//styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://xyzAI.github.io/">
-  <img class="avatar" src="https://xyzAI.github.io//images/avatar.png?v=1561525304435" alt="">
+  <img class="avatar" src="https://xyzAI.github.io//images/avatar.png?v=1561525792743" alt="">
   </a>
   <h1 class="site-title">
     瞎扯
@@ -104,6 +104,32 @@ y''(t)+5y'(t)+6y(t)=2f(t)+3f'(t)
           </div>
         
 
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'f32e201836b0da7433e1',
+    clientSecret: 'e266bd4efce31742b2a96f2b6912f4c027705c81',
+    repo: 'xyzai.github.io',
+    owner: 'xyzAI',
+    admin: ['xyzAI'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
         
 
         <div class="site-footer">
