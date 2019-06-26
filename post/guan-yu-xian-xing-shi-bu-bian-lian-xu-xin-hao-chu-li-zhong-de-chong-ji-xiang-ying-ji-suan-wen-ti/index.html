@@ -3,88 +3,75 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于线性时不变连续信号处理中的“冲击响应”计算问题 | human AI</title>
+<title>关于线性时不变连续信号处理中的“冲击响应”计算问题 | xyz AI</title>
 <meta name="description" content="一个人脑AI统治世界">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://xyzAI.github.io//favicon.ico?v=1561529769549">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://xyzAI.github.io//favicon.ico?v=1561529647962">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://xyzAI.github.io//styles/main.css">
 
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
-
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://xyzAI.github.io/">
-        <img src="https://xyzAI.github.io//images/avatar.png?v=1561529647962" class="site-logo">
-        <h1 class="site-title">human AI</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
-      
-        
-          <a href="https://xyzai.github.io/" class="site-nav">
-            首页
-          </a>
-        
-      
-        
-          <a href="https://xyzAI.github.io//post/about-me/" class="site-nav">
-            关于我
-          </a>
-        
-      
-    </div>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://xyzAI.github.io/">xyz AI</a></h3>
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
         
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      一个人脑AI统治世界
-    </div>
-    <div class="site-footer">
-      始于2019.6.16 | <a class="rss" href="https://xyzAI.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
-
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">关于线性时不变连续信号处理中的“冲击响应”计算问题</h2>
-            <div class="post-date">2019-06-19</div>
+          <li>
             
-              <div class="feature-container" style="background-image: url('https://xyzAI.github.io//post-images/guan-yu-xian-xing-shi-bu-bian-lian-xu-xin-hao-chu-li-zhong-de-chong-ji-xiang-ying-ji-suan-wen-ti.gif')">
-              </div>
+              <a href="https://xyzai.github.io/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="https://xyzAI.github.io//post/about-me/" class="menu">
+                关于我
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>关于线性时不变连续信号处理中的“冲击响应”计算问题</h1>
+            <p class="article-meta">
+              2019-06-19
+              
+            </p>
+            
+              <img src="https://xyzAI.github.io//post-images/guan-yu-xian-xing-shi-bu-bian-lian-xu-xin-hao-chu-li-zhong-de-chong-ji-xiang-ying-ji-suan-wen-ti.gif" alt="关于线性时不变连续信号处理中的“冲击响应”计算问题">
             
             <div class="post-content">
               <p>阶跃响应和冲激响应似乎是信号处理中很重要的两个东西，大部分时间老师都是带着推公式，背公式，带公式计算。但是为什么要这样推公式？为什么这样做行得通？</p>
@@ -102,24 +89,91 @@ y''(t)+5y'(t)+6y(t)=2f(t)+3f'(t)
 那么如果右侧不只是f(t)，就可以假设出新的y1(t),f1(t)。让新的式子右侧只有f1(t)，左侧按照原式的系数写出。然后就能求出h1(t)。再根据线性的特点，H(t)=2h1(t)+3h'1(t)。从方程中也看出来，系数是原式右侧的系数。这样就能计算出冲击响应，而阶跃响应可以由冲击响应直接积分得到。</p>
 
             </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://xyzAI.github.io//post/ru-he-kuai-su-de-xun-zhao-dao-ni-xiang-yao-de-zi-yuan">
-                  <h3 class="post-title">
-                    如何快速的寻找到你想要的资源
-                  </h3>
-                </a>
-              </div>
-            
-
-            
-
-          </div>
-
+          </article>
         </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://xyzAI.github.io//post/ru-he-kuai-su-de-xun-zhao-dao-ni-xiang-yao-de-zi-yuan">
+                <h3 class="post-title">
+                  如何快速的寻找到你想要的资源
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
       </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://xyzAI.github.io//images/avatar.png?v=1561529769549" class="no-responsive avatar">
+    <div class="text-muted">一个人脑AI统治世界</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://xyzAI.github.io//post/proteus-yuan-jian-ku-chang-yong-yuan-jian-ming-cheng-ji-zhong-ying-dui-zhao">Proteus元件库常用元件名称及中英对照</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://xyzAI.github.io//post/xiao-du-zhi-neng-yin-xiang-ti-yan">小度智能音箱体验</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://xyzAI.github.io//post/guan-yu-xian-xing-shi-bu-bian-lian-xu-xin-hao-chu-li-zhong-de-chong-ji-xiang-ying-ji-suan-wen-ti">关于线性时不变连续信号处理中的“冲击响应”计算问题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://xyzAI.github.io//post/ru-he-kuai-su-de-xun-zhao-dao-ni-xiang-yao-de-zi-yuan">如何快速的寻找到你想要的资源</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+    </div>
+  </div>
+  <div class="paper">
+    始于2019.6.16 | <a class="rss" href="https://xyzAI.github.io//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -129,13 +183,6 @@ y''(t)+5y'(t)+6y(t)=2f(t)+3f'(t)
 AOS.init();
 
 hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
 
 </script>
 
