@@ -1,77 +1,89 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>小度智能音箱体验 | human AI</title>
-<link rel="shortcut icon" href="https://xyzAI.github.io//favicon.ico?v=1561529577362">
+<meta name="description" content="一个人脑AI统治世界">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://xyzAI.github.io//favicon.ico?v=1561529647962">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://xyzAI.github.io//styles/main.css">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://xyzAI.github.io/">
-  <img class="avatar" src="https://xyzAI.github.io//images/avatar.png?v=1561529577362" alt="">
-  </a>
-  <h1 class="site-title">
-    human AI
-  </h1>
-  <p class="site-description">
-    一个人脑AI统治世界
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://xyzAI.github.io/">
+        <img src="https://xyzAI.github.io//images/avatar.png?v=1561529647962" class="site-logo">
+        <h1 class="site-title">human AI</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="https://xyzai.github.io/" class="menu">
-          首页
-        </a>
+        
+          <a href="https://xyzai.github.io/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="https://xyzAI.github.io//post/about-me/" class="site-nav">
+            关于我
+          </a>
+        
       
-        <a href="https://xyzAI.github.io//post/about-me/" class="menu">
-          关于我
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
+      
+    </div>
+    <div class="site-description">
+      一个人脑AI统治世界
+    </div>
+    <div class="site-footer">
+      始于2019.6.16 | <a class="rss" href="https://xyzAI.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              小度智能音箱体验
-            </h2>
-            <div class="post-info">
-              <time class="post-time">
-                · 2019-06-23 ·
-              </time>
-              
-            </div>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">小度智能音箱体验</h2>
+            <div class="post-date">2019-06-23</div>
             
-              <div class="post-feature-image" style="background-image: url('https://xyzAI.github.io//post-images/xiao-du-zhi-neng-yin-xiang-ti-yan.jpeg')">
+              <div class="feature-container" style="background-image: url('https://xyzAI.github.io//post-images/xiao-du-zhi-neng-yin-xiang-ti-yan.jpeg')">
               </div>
             
             <div class="post-content">
@@ -98,32 +110,45 @@
 <p>现阶段来说，智能音箱设备还发展不完善，只能说实现了基本功能，能够作为智能家居的控制中心，但是仅仅是能用阶段。距离真正的好用还有很长的路要走，摆在最前面的便是自然语言识别的问题。当然这可以通过扩大数据库来实现对自然语言的精准识别。其次就是唤醒语音助手的逻辑，如何变成像钢铁侠的FRIDAY这样随叫随到的存在是接下来各大厂需要攻克的难题。现在的小度智能音箱与一众其他的智能音响基本相同，该有的都有，可圈可点的地方找不到，似乎是为了顺应这个AI时代而创造出来的流量产品。相比于小爱，小度的智能化是不足的，但是不足100的价格还是相当能打的。</p>
 
             </div>
-          </article>
-        </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://xyzAI.github.io//post/guan-yu-xian-xing-shi-bu-bian-lian-xu-xin-hao-chu-li-zhong-de-chong-ji-xiang-ying-ji-suan-wen-ti">
+                  <h3 class="post-title">
+                    关于线性时不变连续信号处理中的“冲击响应”计算问题
+                  </h3>
+                </a>
+              </div>
+            
 
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://xyzAI.github.io//post/guan-yu-xian-xing-shi-bu-bian-lian-xu-xin-hao-chu-li-zhong-de-chong-ji-xiang-ying-ji-suan-wen-ti">
-              <h3 class="post-title">
-                关于线性时不变连续信号处理中的“冲击响应”计算问题
-              </h3>
-            </a>
+            
+
           </div>
-        
 
-        
-
-        <div class="site-footer">
-  始于2019.6.16 | 
-  <a class="rss" href="https://xyzAI.github.io//atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
+        </div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
   </body>
 </html>
