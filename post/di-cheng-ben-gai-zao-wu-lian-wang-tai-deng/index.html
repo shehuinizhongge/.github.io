@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>低成本改造物联网台灯 | XYZ AI</title>
+<meta name="description" content="一个人脑AI统治世界">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://xyzAI.github.io//favicon.ico?v=1563007475990">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://xyzAI.github.io//styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://xyzAI.github.io/">
+        <img src="https://xyzAI.github.io//images/avatar.png?v=1563007475990" class="site-logo">
+        <h1 class="site-title">XYZ AI</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://xyzai.github.io/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="https://xyzAI.github.io//post/about-me/" class="site-nav">
+            关于我
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      一个人脑AI统治世界
+    </div>
+    <div class="site-footer">
+      始于2019.6.16 | <a class="rss" href="https://xyzAI.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">低成本改造物联网台灯</h2>
+            <div class="post-date">2019-07-13</div>
+            
+              <div class="feature-container" style="background-image: url('https://xyzAI.github.io//post-images/di-cheng-ben-gai-zao-wu-lian-wang-tai-deng.jfif')">
+              </div>
+            
+            <div class="post-content">
+              <p>晚上，躺在床上玩手机，到了睡觉的时间不想下床关灯。我需要低成本改造家里的非智能台灯。</p>
+<!-- more -->
+<h1 id="1-需求">1. 需求</h1>
+<p>我的需求很简单，躺在床上，不用下床就可以控制台灯的开关。看了晚上众多物联网产品，最简单的方案就是购买智能插座，接入某个智能家居APP。大概成本至少得30元。而且还需要组建家庭网关，等这一套都置办下来得不少钱。而我对于其他的智能家居产品并不感冒，只想安安静静的拥有一个可以控制的台灯。以小米为例，软件还充斥各种广告，还有泄漏我个人隐私的嫌疑。</p>
+<h1 id="2-手头的设备">2. 手头的设备</h1>
+<p>目前我手头的设备以苹果系为主，因此，我还是希望能用siri来控制台灯的。但是查询homekite的产品线并不全，而且还十分的昂贵。果断放弃所有直接购买的念头，还是决定自己diy。</p>
+<h1 id="3-diy开始">3. DIY开始</h1>
+<p>作为物联网设备，如何接入网络是首先考虑的事情。目前阶段的想法有两条</p>
+<p>1.蓝牙：手机通过蓝牙链接台灯，控制台灯。
+2.WIFI：手机连接家里路由器，台灯也接入家里的路由器，通过访问IP来操控台灯。</p>
+<p>苹果设备蓝牙有着一言难尽的苦，而且蓝牙控制范围窄，WIFI成了首选。而且将来如果需要，还可以接入网络，达到远程操控的目的</p>
+<h1 id="4-材料">4. 材料</h1>
+<p>核心部件选择ESP8266，就是那个被很多人买来用做WIFI探针的东西。<img src="https://xyzAI.github.io//post-images/1563005675934.jpg" alt=""></p>
+<p>由于手头没有焊接设备，也没有工具。于是直接购买了开发板。也省了不少事。</p>
+<p>然后就是继电器，通过8266控制继电器来操控台灯通断，实现起来应该会很简单<img src="https://xyzAI.github.io//post-images/1563005835083.jpg" alt="">只买了一路继电器，目前还没有想法接入多路设备。</p>
+<h1 id="5-给esp8266编程">5. 给ESP8266编程</h1>
+<p>由于买的是开发板，很多事都省了，可以直接用arduino IDE写程序，只要装好arduinoIDE的库就可以了。至于库文件网络上有，商家也会提供。然后按照自己买的板子的型号配置好软件<img src="https://xyzAI.github.io//post-images/1563006273322.png" alt="">
+代码开源如下</p>
+<pre><code>#include &lt;ESP8266WiFi.h&gt;
+#include &lt;WiFiClient.h&gt;
+#include &lt;ESP8266WebServer.h&gt;
+#include &lt;ESP8266mDNS.h&gt;
+
+const char* ssid = &quot;你家路由器WIFI名称&quot;;
+const char* password = &quot;WIFI密码&quot;;
+const int relayPin =D0;
+
+ESP8266WebServer server(80);
+
+void setup() {
+
+pinMode(relayPin, OUTPUT);
+
+Serial.begin(9600);
+
+connectToWiFi();
+
+server.on(&quot;/&quot;, handleRoot);
+server.begin();
+Serial.println(&quot;HTTP server started&quot;);}
+
+void loop() {
+
+server.handleClient();}
+
+void connectToWiFi() {
+
+Serial.print(&quot;\n\nConnecting to &quot;);
+Serial.println(ssid);
+
+WiFi.begin(ssid, password);
+
+while (WiFi.status() != WL_CONNECTED) {
+delay(500);
+Serial.print(&quot;.&quot;);}
+
+Serial.println(&quot;\nWiFi connected&quot;);  //串口监视器中显示的信息
+Serial.print(&quot;IP address: &quot;);  //串口监视器中显示IP地址
+Serial.println(WiFi.localIP());}
+
+void handleRoot() {
+
+Serial.println(&quot;Got a Request&quot;);
+
+if (server.arg(0)[0] == '1') {
+digitalWrite(relayPin, HIGH);}
+
+else 
+{
+digitalWrite(relayPin, LOW);}
+String msg = &quot;&quot;;
+
+msg += &quot;&lt;html&gt;&lt;body&gt;\n&quot;;  //此部分为浏览器上显示的信息，可根据实际修改美化
+msg += &quot;&lt;h1&gt;MYE LED&lt;/h1&gt;&quot;;
+msg += &quot;&lt;h2&gt;&lt;a href='?a=1'/&gt;On&lt;/a&gt;&lt;/h2&gt;&quot;;  //开启
+msg += &quot;&lt;h2&gt;&lt;a href='?a=0'/&gt;Off&lt;/a&gt;&lt;/h2&gt;&quot;; //关闭
+msg += &quot;&lt;/body&gt;&lt;/html&gt;&quot;;
+
+server.send(200, &quot;text/html&quot;, msg);}
+</code></pre>
+<p>这样先打开串口监视器，可以看见路由器给你esp开发板分配的IP，然后记下来这串ip，用浏览器打开。
+<img src="https://xyzAI.github.io//post-images/1563006640119.jpg" alt="">
+可以看到按键了，只要点击就好了。</p>
+<h1 id="6-接入siri">6. 接入Siri</h1>
+<p>iOS12的捷径是个好东西，用捷径可以让Siri有更多可玩性。代码中，只要给a=1和a=0就能操控继电器了，那么只要把之前我们记下来的IP地址稍微改一下<img src="https://xyzAI.github.io//post-images/1563006897102.jpg" alt="">
+大概这样，一个是1，一个是0。把这俩网址都保存到safari浏览器，给他们起好名字<img src="https://xyzAI.github.io//post-images/1563006999012.png" alt="">
+然后打开设置，点击Siri与搜索，点击所有快捷指令<img src="https://xyzAI.github.io//post-images/1563007102446.png" alt="">
+向下滑找到safari浏览器，然后就能看见刚刚保存的那两个网页了，给他们录入语言指令就可以了。<img src="https://xyzAI.github.io//post-images/1563007260216.jpg" alt=""></p>
+<p>接下来就能躺在床上，优雅的叫Siri帮你关灯了！！！</p>
+<p>成果图<img src="https://xyzAI.github.io//post-images/1563007392448.JPG" alt=""></p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://xyzAI.github.io//post/proteus-yuan-jian-ku-chang-yong-yuan-jian-ming-cheng-ji-zhong-ying-dui-zhao">
+                  <h3 class="post-title">
+                    Proteus元件库常用元件名称及中英对照
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
