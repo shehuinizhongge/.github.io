@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>低成本改造台灯（续集） | XYZ AI</title>
+<meta name="description" content="一个人脑AI统治世界">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://xyzAI.github.io//favicon.ico?v=1563937535695">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://xyzAI.github.io//styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://xyzAI.github.io/">
+        <img src="https://xyzAI.github.io//images/avatar.png?v=1563937535695" class="site-logo">
+        <h1 class="site-title">XYZ AI</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://xyzai.github.io/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="https://xyzAI.github.io//post/about-me/" class="site-nav">
+            关于我
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      一个人脑AI统治世界
+    </div>
+    <div class="site-footer">
+      始于2019.6.16 | <a class="rss" href="https://xyzAI.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">低成本改造台灯（续集）</h2>
+            <div class="post-date">2019-07-24</div>
+            
+              <div class="feature-container" style="background-image: url('https://xyzAI.github.io//post-images/di-cheng-ben-gai-zao-tai-deng-xu-ji.JPG')">
+              </div>
+            
+            <div class="post-content">
+              <p>晚上，当你从外面回家，室内一片漆黑，你需要开灯时想起了你的智能台灯。于是你掏出手机，默默关闭数据连接，打开WIFI，连接家里的互联网，然后喊了“嘿，Siri”此时你老妈已经跑去把台灯打开了。</p>
+<!-- more -->
+<p>有时我会遇到这种情况，从外面回来手机还没有连到家里的无线网；或者是躺在床上喊完Siri要你先解锁iPhone。这样智障一般的操作还在困扰着我，于是我知道，上篇文章讲到的方法很大程度上还是不够智能。本着懒死的人生信条，再次把那块ESP8266扣了出来，把代码打开。如果，能绕过手机严苛的联网机制那么会不会好一些。</p>
+<h1 id="利用家中的小度智能音响"><strong>利用家中的小度智能音响</strong></h1>
+<p>之前写过小度的一些东西，总的来说是个智障，也就只能在闲暇放个歌来听听。但是当我打开了小度的官网看到了DuerOS的开发介绍时又觉得小度音响还是可以再折腾一下的。于是上网查了一下关于ESP接入小度的相关资料，果然有很大收获。于是有了以下代码，把ESP接入DuerOS。代码来自网络，有稍加修改。基于blinker接入小度，所以请现在手机上下载blinker，然后添加设备，把接入码复制下来。</p>
+<pre><code>#define BLINKER_WIFI
+#define BLINKER_DUEROS_OUTLET
+#include &lt;Blinker.h&gt;
+char auth[] = &quot;46514c91fc14&quot;; //blinker的接入码
+char ssid[] = &quot;Xiaomi_F7CF&quot;; //路由器名称
+char pswd[] = &quot;abcd6587771&quot;; //你的路由器密码
+bool oState = false;
+const int OUT_PIN = D0;//接继电器
+#define BUTTON_1 &quot;OUTButton&quot;
+BlinkerButton Button1(BUTTON_1);
+void duerPowerState(const String &amp; state)
+{
+  BLINKER_LOG(&quot;need set power state: &quot;, state);
+  if (state == BLINKER_CMD_ON) {
+    digitalWrite(OUT_PIN, HIGH);
+    BlinkerDuerOS.powerState(&quot;on&quot;);
+    BlinkerDuerOS.print();
+    oState = true;
+  }
+  else if (state == BLINKER_CMD_OFF) {
+    digitalWrite(OUT_PIN, LOW);
+    BlinkerDuerOS.powerState(&quot;off&quot;);
+    BlinkerDuerOS.print();
+    oState = false;
+  }
+}
+void duerQuery(int32_t queryCode)
+{
+  BLINKER_LOG(&quot;DuerOS Query codes: &quot;, queryCode);
+  switch (queryCode)
+  {
+    case BLINKER_CMD_QUERY_TIME_NUMBER :
+      BLINKER_LOG(&quot;DuerOS Query time&quot;);
+      BlinkerDuerOS.time(millis());
+      BlinkerDuerOS.print();
+      break;
+    default :
+      BlinkerDuerOS.time(millis());/*读取设备运行时间，只要问小度就可以得知设备工作时长了*/
+      BlinkerDuerOS.print();
+      break;
+  }
+}
+void dataRead(const String &amp; data)
+{
+  BLINKER_LOG(&quot;Blinker readString: &quot;, data);
+  Blinker.vibrate();
+  uint32_t BlinkerTime = millis();
+  Blinker.print(BlinkerTime);
+  Blinker.print(&quot;millis&quot;, BlinkerTime);
+}
+void setup()
+{
+  Serial.begin(115200);
+  BLINKER_DEBUG.stream(Serial);
+  pinMode(OUT_PIN, OUTPUT);
+  digitalWrite(OUT_PIN, LOW);
+  Blinker.begin(auth, ssid, pswd);
+  Blinker.attachData(dataRead);
+  Button1.attach(button1_callback);
+  BlinkerDuerOS.attachPowerState(duerPowerState);
+  BlinkerDuerOS.attachQuery(duerQuery);
+}
+void loop()
+{
+  Blinker.run();
+}
+void button1_callback(const String &amp; state)
+{
+  if (state == BLINKER_CMD_BUTTON_TAP)
+  {
+    if (oState) {
+      digitalWrite(OUT_PIN, LOW);
+      oState = false;
+    }
+    else {
+      digitalWrite(OUT_PIN, HIGH);
+      oState = true;
+    }
+    Button1.print();
+  }
+}
+</code></pre>
+<p>代码烧入开发板后，可以现在blinker上看到设备在线情况，然后打开小度音响APP，接入blinker就可以看到设备了，修改名称后就能用接近自然语言的方式唤醒设备。总体来说，绕过了唤醒Siri要求解锁的智障操作。从外面回来也只需要扯着嗓子喊小度就好了。像天猫精灵，小度之类的小众产品的使用体验确实一言难尽。</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://xyzAI.github.io//post/di-cheng-ben-gai-zao-wu-lian-wang-tai-deng">
+                  <h3 class="post-title">
+                    低成本改造物联网台灯
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
