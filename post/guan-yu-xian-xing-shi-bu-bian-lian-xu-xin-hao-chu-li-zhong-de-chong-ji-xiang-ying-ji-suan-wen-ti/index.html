@@ -1,99 +1,293 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" >
+<head>
 
-<title>关于线性时不变连续信号处理中的“冲击响应”计算问题 | XYZ AI</title>
-<meta name="description" content="一个人脑AI统治世界">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="阶跃响应和冲激响应似乎是信号处理中很重要的两个东西，大部分时间老师都是带着推公式，背公式，带公式计算。但是为什么要这样推公式？为什么这样做行得通？
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+我的教材是**信号与线性系统分析吴大正第四版**，由于本科阶段学识有限，仅代表个人观点。
+..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://xyzAI.github.io//media/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/dracula.min.css">
+              
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://xyzAI.github.io//media/css/bootstrap.min.css">
+    <title>XYZ AI</title>
+</head>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://xyzAI.github.io//favicon.ico?v=1576919415739">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://xyzAI.github.io//styles/main.css">
+<body>
+    <!-- 响应式布局，针对PC端内容显示 -->
+    <div id="content">
+        <div class="nav-large">
+            <div class="row">
+                <div class="side"><html>
 
+<head>
+    <link rel="stylesheet" href="https://xyzAI.github.io//styles/main.css">
+    <meta name="description" content="一个人脑AI统治世界" />
+    <title>Document</title>
+</head>
+<style>
+</style>
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
-
-  </head>
-  <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://xyzAI.github.io/">
-        <img src="https://xyzAI.github.io//images/avatar.png?v=1576919415739" class="site-logo">
-        <h1 class="site-title">XYZ AI</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
-      
+<body>
+    <div id=side>
+        <div class="avatar-border">
+            <img src="https://xyzAI.github.io//images/avatar.png?v=1586271502599" class="avatar">
+        </div>
+        <div class="sitename">XYZ AI</div>
+        <span class="describtion" data-text='["一个人脑AI统治世界"]'>&nbsp;</span>
         
-          <a href="https://xyzai.github.io/" class="site-nav">
+        <div class="search">
+            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <div class="search-results"></div>
+        </div>
+        
+    <div class="share-button">
+        <span>Contact</span>
+        
+        
+        
+        
+        
+        
+    </div>
+    <div id="qq" style="display:none"></div>
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://xyzai.github.io/" class="menubutton">
             首页
-          </a>
-        
-      
-        
-          <a href="https://xyzAI.github.io//post/about-me/" class="site-nav">
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://xyzAI.github.io//post/about-me/" class="menubutton">
             关于我
-          </a>
-        
-      
-        
-          <a href="https://github.com/xyzAI" class="site-nav" target="_blank">
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://github.com/xyzAI" class="mchocie describtion" target="_blank">
             我的GitHub
-          </a>
-        
-      
+        </a>
     </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
+    
+    
+    
+    <hr>
+    <div id="footinfo">始于2019.6.16 | Theme: Fog</div>
+    <div id="sitegotimeDate">载入天数...</div>
+    <div id="sitegotimes">载入时分秒...</div>
+    <div id="cussitetime" style="display:none">06/16/2019</div>
     </div>
-    <div class="site-description">
-      一个人脑AI统治世界
-    </div>
-    <div class="site-footer">
-      始于2019.6.16 | <a class="rss" href="https://xyzAI.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
+</body>
+
+</html>
+<script src="https://xyzAI.github.io//media/js/wordshow.js"></script>
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+
+    //-------------------------------------------------搜索
+    // 获取搜索框、搜索按钮、清空搜索、结果输出对应的元素
+    var searchInput = document.querySelector('.search-input');
+    var searchResults = document.querySelector('.search-results');
+
+    // 申明保存文章的标题、链接、内容的数组变量
+    var searchValue = '',
+        arrItems = [],
+        arrLinks = [],
+        arrTitles = [],
+        arrResults = [],
+        indexItem = [],
+        itemLength = 0;
+    var tmpDiv = document.createElement('div');
+    tmpDiv.className = 'result-item';
+
+    // ajax 的兼容写法
+    var xhr = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            xml = xhr.responseXML;
+            arrItems = xml.getElementsByTagName('entry');
+            itemLength = arrItems.length;
+            console.log(arrItems);
+            // 遍历并保存所有文章对应的标题、链接、内容到对应的数组中
+            // 同时过滤掉 HTML 标签
+            for (i = 0; i < itemLength; i++) {
+                var link = arrItems[i].getElementsByTagName('link')[0];
+                arrLinks[i] = link.getAttribute("href");
+                arrTitles[i] = arrItems[i].getElementsByTagName('title')[0].
+                childNodes[0].nodeValue.replace(/<.*?>/g, '');
+            }
+        }
+    }
+
+    // 开始获取根目录下 feed.xml 文件内的数据
+    xhr.open('get', '/atom.xml', true);
+    xhr.send();
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">关于线性时不变连续信号处理中的“冲击响应”计算问题</h2>
-            <div class="post-date">2019-06-19</div>
+
+    // 输入框内容变化后就开始匹配，可以不用点按钮
+    // 经测试，onkeydown, onchange 等方法效果不太理想，
+    // 存在输入延迟等问题，最后发现触发 input 事件最理想，
+    // 并且可以处理中文输入法拼写的变化
+    searchInput.oninput = function () {
+        setTimeout(searchConfirm, 0);
+    }
+    searchInput.onfocus = function () {
+        searchResults.style.display = 'block';
+    }
+
+    function searchConfirm() {
+        if (searchInput.value == '') {
+            searchResults.style.display = 'none';
+        } else if (searchInput.value.search(/^\s+$/) >= 0) {
+            // 检测输入值全是空白的情况
+            searchInit();
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '请输入有效内容...';
+            searchResults.appendChild(itemDiv);
+        } else {
+            // 合法输入值的情况
+            searchInit();
+            searchValue = searchInput.value;
+            // 在标题、内容中查找
+            searchMatching(arrTitles, searchValue);
+        }
+    }
+
+    // 每次搜索完成后的初始化
+    function searchInit() {
+        arrResults = [];
+        indexItem = [];
+        searchResults.innerHTML = '';
+        searchResults.style.display = 'block';
+    }
+
+    function searchMatching(arr1, input) {
+        // 忽略输入大小写
+        input = new RegExp(input, 'i');
+        // 在所有文章标题、内容中匹配查询值
+        for (i = 0; i < itemLength; i++) {
+            if (arr1[i].search(input) !== -1) {
+                var arr = arr1;
+                indexItem.push(i); // 保存匹配值的索引
+                var indexContent = arr[i].search(input);
+                // 此时 input 为 RegExp 格式 /input/i，转换为原 input 字符串长度
+                var l = input.toString().length - 3;
+                var step = 10;
+
+                // 将匹配到内容的地方进行黄色标记，并包括周围一定数量的文本
+                arrResults.push(arr[i].slice(indexContent - step, indexContent) +
+                    '<mark>' + arr[i].slice(indexContent, indexContent + l) + '</mark>' +
+                    arr[i].slice(indexContent + l, indexContent + l + step));
+            }
+        }
+
+        // 输出总共匹配到的数目
+        var totalDiv = tmpDiv.cloneNode(true);
+        totalDiv.innerHTML = '<b>总匹配：' + indexItem.length + ' 项<hr></b>';
+        searchResults.appendChild(totalDiv);
+
+        // 未匹配到内容的情况
+        if (indexItem.length == 0) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '未匹配到内容...';
+            searchResults.appendChild(itemDiv);
+        }
+
+        // 将所有匹配内容进行组合
+        for (i = 0; i < arrResults.length; i++) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerHTML = '<b>[' + arrTitles[indexItem[i]] +
+                ']</b><p>' + arrResults[i] + "</p><hr />";
+            itemDiv.setAttribute('onclick', 'changeHref(arrLinks[indexItem[' + i + ']])');
+            searchResults.appendChild(itemDiv);
+        }
+    }
+
+    function changeHref(href) {
+        location.href = href;
+    }
+
+    function showqq() {
+        var qq = document.getElementById("qq").innerHTML;
+        if (qq != '')
+            alert("博主的QQ联系方式为：" + qq);
+        else
+            alert("博主暂未设置QQ联系方式");
+    }
+</script></div>
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div id="main" class="col-xs-12 col-sm-7">
+                    <link rel="stylesheet" href="https://xyzAI.github.io//media/css/font-awesome.css">
+<style>
+
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
             
-              <div class="feature-container" style="background-image: url('https://xyzAI.github.io//post-images/guan-yu-xian-xing-shi-bu-bian-lian-xu-xin-hao-chu-li-zhong-de-chong-ji-xiang-ying-ji-suan-wen-ti.gif')">
-              </div>
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="https://xyzAI.github.io//post-images/guan-yu-xian-xing-shi-bu-bian-lian-xu-xin-hao-chu-li-zhong-de-chong-ji-xiang-ying-ji-suan-wen-ti.gif" class="postimage" style="cursor:auto">
+            </div>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2019-06-19</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+                <div class="posttag">
+                    
+                </div>
+            </div>
             
-            <div class="post-content">
-              <p>阶跃响应和冲激响应似乎是信号处理中很重要的两个东西，大部分时间老师都是带着推公式，背公式，带公式计算。但是为什么要这样推公式？为什么这样做行得通？</p>
+            <div id="texttitle" style="text-align: center">
+                <h2>关于线性时不变连续信号处理中的“冲击响应”计算问题</h2>
+            </div>
+            <div class="text ">
+                <p>阶跃响应和冲激响应似乎是信号处理中很重要的两个东西，大部分时间老师都是带着推公式，背公式，带公式计算。但是为什么要这样推公式？为什么这样做行得通？</p>
 <!-- more -->
 <p><code>我的教材是**信号与线性系统分析吴大正第四版**，由于本科阶段学识有限，仅代表个人观点。</code></p>
 <h2 id="关于线性的一些理解">关于“线性”的一些理解</h2>
@@ -109,44 +303,247 @@ y''(t)+5y'(t)+6y(t)=2f(t)+3f'(t)<br>
 
             </div>
             
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://xyzAI.github.io//post/ru-he-kuai-su-de-xun-zhao-dao-ni-xiang-yao-de-zi-yuan">
-                  <h3 class="post-title">
-                    如何快速的寻找到你想要的资源
-                  </h3>
+            <div class="prev-post">
+                上一篇
+                <a href="https://xyzAI.github.io/post/xiao-du-zhi-neng-yin-xiang-ti-yan/">
+                    小度智能音箱体验
                 </a>
-              </div>
+            </div>
             
-
             
-
-          </div>
-
+            <div class="next-post">
+                下一篇
+                <a href="https://xyzAI.github.io/post/ru-he-kuai-su-de-xun-zhao-dao-ni-xiang-yao-de-zi-yuan/">
+                    如何快速的寻找到你想要的资源
+                </a>
+            </div>
+            
         </div>
+    </div>
+</body>
+<script>
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
+</script>
+                    <div name="comment" style="background: white">
+                        <div class="commentcontainer">
+                            
+                            <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="toc-container">
+                    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%85%B3%E4%BA%8E%E7%BA%BF%E6%80%A7%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%86%E8%A7%A3">关于“线性”的一些理解</a></li>
+<li><a href="#%E5%86%B2%E5%87%BB%E5%93%8D%E5%BA%94%E7%9A%84%E4%B8%80%E4%B8%AA%E9%87%8D%E8%A6%81%E6%80%A7%E8%B4%A8">冲击响应的一个重要性质</a></li>
+</ul>
+</li>
+</ul>
+
+                </div>
+            </div>
+        </div>
+        <div id="bg">
+        </div>
+        <div id="bgurl" style="display:none">\media\images\custom-bgimage.jpg</div>
+    </div>
+    <!-- 响应式布局，针对手机端内容显示 -->
+    <div class="nav-small">
+        <head>
+
+  <!-- 引入Bootstrap核心样式文件 -->
+  <link rel="stylesheet" href="https://xyzAI.github.io//media/css/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">XYZ AI&nbsp;&nbsp;|</a>
       </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          
+          
+          <li>
+            <a href="https://xyzai.github.io/">
+              首页
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="https://xyzAI.github.io//post/about-me/">
+              关于我
+            </a>
+          </li>
+          
+          
+          
+          <li><a href="https://github.com/xyzAI" target="_blank">
+              我的GitHub
+            </a></li>
+          
+          
+          
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- 引入BootStrap核心js文件 -->
+  <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+        <div style="margin-top:30px"></div>
+        <link rel="stylesheet" href="https://xyzAI.github.io//media/css/font-awesome.css">
+<style>
+
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
+            
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="https://xyzAI.github.io//post-images/guan-yu-xian-xing-shi-bu-bian-lian-xu-xin-hao-chu-li-zhong-de-chong-ji-xiang-ying-ji-suan-wen-ti.gif" class="postimage" style="cursor:auto">
+            </div>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2019-06-19</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+                <div class="posttag">
+                    
+                </div>
+            </div>
+            
+            <div id="texttitle" style="text-align: center">
+                <h2>关于线性时不变连续信号处理中的“冲击响应”计算问题</h2>
+            </div>
+            <div class="text ">
+                <p>阶跃响应和冲激响应似乎是信号处理中很重要的两个东西，大部分时间老师都是带着推公式，背公式，带公式计算。但是为什么要这样推公式？为什么这样做行得通？</p>
+<!-- more -->
+<p><code>我的教材是**信号与线性系统分析吴大正第四版**，由于本科阶段学识有限，仅代表个人观点。</code></p>
+<h2 id="关于线性的一些理解">关于“线性”的一些理解</h2>
+<p>首先我们来看看比较重要的&quot;线性时不变系统&quot;:所谓线性时不变系统,首先要线性,然后要时不变:所谓线性,指的是如果任意输入x输入系统得到y, 那么xk输入系统,应该得到yk,比如,&quot;乘100&quot;就是个线性系统,因为例如以5为输入得到输出500,而56为输入得到3000 == 51006. 而&quot;平方&quot;则不是线性系统,因为以5为输入得到25,而56得到的结果是3030 != 556.线性时不变系统的另一个特性就是叠加性, 即假如x进入系统得到结果f(x), 那么若x=a+b,必有f(x) = f(a) + f(b). 还有就是时不变,时不变指的是若一个输入x得到信号y,那么一个经过了延迟的x得到的也只是一个被延迟过的y.而不能是其他值。<br>
+也就是说，我们不需要让这所有信号都输入系统,由于线性时不变,我们只需要写出信号中任意一个信号，然后进行归一化,对齐到0时刻,进入系统,再对输出乘以不同系数,延迟不同时间,就得到了所有的输出。<br>
+<strong>而在用经典法求冲击响应和阶跃响应时，恰好是用了这一性质。</strong></p>
+<h2 id="冲击响应的一个重要性质">冲击响应的一个重要性质</h2>
+<p>在知道了以上内容后，就要拿来求冲击响应了。一般我们会拿到这样的一个题。<br>
+y''(t)+5y'(t)+6y(t)=2f(t)+3f'(t)<br>
+然后要求出冲击响应。<br>
+在书上有个重要的性质，如果右侧只含f(t)，那么可以让f(t)=δ(t)，左侧全变成h(t)。然后求特征方程，即可解出冲击响应。<br>
+那么如果右侧不只是f(t)，就可以假设出新的y1(t),f1(t)。让新的式子右侧只有f1(t)，左侧按照原式的系数写出。然后就能求出h1(t)。再根据线性的特点，H(t)=2h1(t)+3h'1(t)。从方程中也看出来，系数是原式右侧的系数。这样就能计算出冲击响应，而阶跃响应可以由冲击响应直接积分得到。</p>
+
+            </div>
+            
+            <div class="prev-post">
+                上一篇
+                <a href="https://xyzAI.github.io/post/xiao-du-zhi-neng-yin-xiang-ti-yan/">
+                    小度智能音箱体验
+                </a>
+            </div>
+            
+            
+            <div class="next-post">
+                下一篇
+                <a href="https://xyzAI.github.io/post/ru-he-kuai-su-de-xun-zhao-dao-ni-xiang-yao-de-zi-yuan/">
+                    如何快速的寻找到你想要的资源
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script>
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
+</script>
+        <div name="comment" style="background: white">
+            <div class="commentcontainer">
+                
+                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                
+            </div>
+        </div>
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
+</body>
+<script>
+    hljs.initHighlightingOnLoad()
 </script>
+<script src="https://xyzAI.github.io//media/js/post.js"></script>
 
-
-
-
-  </body>
-</html>
+<script src="https://l2dwidget.js.org//lib/L2Dwidget.min.js"></script>
+<script src="https://xyzAI.github.io//media/js/live2d.js"></script>

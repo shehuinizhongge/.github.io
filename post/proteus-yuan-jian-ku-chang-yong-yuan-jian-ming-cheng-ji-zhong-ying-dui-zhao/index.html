@@ -1,99 +1,297 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" >
+<head>
 
-<title>Proteus元件库常用元件名称及中英对照 | XYZ AI</title>
-<meta name="description" content="一个人脑AI统治世界">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="用Proteus画图是个麻烦事，有个中英文原件对照的表就好多了（持续更新，亲测可用）
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+大致分类
+1.Analog Ics
+Amplifier : 放大器
+Comparators: 比较器
+Display Drivers: 显示驱动器
+Fi..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://xyzAI.github.io//media/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/dracula.min.css">
+              
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://xyzAI.github.io//media/css/bootstrap.min.css">
+    <title>XYZ AI</title>
+</head>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://xyzAI.github.io//favicon.ico?v=1576919415739">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://xyzAI.github.io//styles/main.css">
+<body>
+    <!-- 响应式布局，针对PC端内容显示 -->
+    <div id="content">
+        <div class="nav-large">
+            <div class="row">
+                <div class="side"><html>
 
+<head>
+    <link rel="stylesheet" href="https://xyzAI.github.io//styles/main.css">
+    <meta name="description" content="一个人脑AI统治世界" />
+    <title>Document</title>
+</head>
+<style>
+</style>
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
-
-  </head>
-  <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://xyzAI.github.io/">
-        <img src="https://xyzAI.github.io//images/avatar.png?v=1576919415739" class="site-logo">
-        <h1 class="site-title">XYZ AI</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
-      
+<body>
+    <div id=side>
+        <div class="avatar-border">
+            <img src="https://xyzAI.github.io//images/avatar.png?v=1586271502599" class="avatar">
+        </div>
+        <div class="sitename">XYZ AI</div>
+        <span class="describtion" data-text='["一个人脑AI统治世界"]'>&nbsp;</span>
         
-          <a href="https://xyzai.github.io/" class="site-nav">
+        <div class="search">
+            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <div class="search-results"></div>
+        </div>
+        
+    <div class="share-button">
+        <span>Contact</span>
+        
+        
+        
+        
+        
+        
+    </div>
+    <div id="qq" style="display:none"></div>
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://xyzai.github.io/" class="menubutton">
             首页
-          </a>
-        
-      
-        
-          <a href="https://xyzAI.github.io//post/about-me/" class="site-nav">
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://xyzAI.github.io//post/about-me/" class="menubutton">
             关于我
-          </a>
-        
-      
-        
-          <a href="https://github.com/xyzAI" class="site-nav" target="_blank">
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://github.com/xyzAI" class="mchocie describtion" target="_blank">
             我的GitHub
-          </a>
-        
-      
+        </a>
     </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
+    
+    
+    
+    <hr>
+    <div id="footinfo">始于2019.6.16 | Theme: Fog</div>
+    <div id="sitegotimeDate">载入天数...</div>
+    <div id="sitegotimes">载入时分秒...</div>
+    <div id="cussitetime" style="display:none">06/16/2019</div>
     </div>
-    <div class="site-description">
-      一个人脑AI统治世界
-    </div>
-    <div class="site-footer">
-      始于2019.6.16 | <a class="rss" href="https://xyzAI.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
+</body>
+
+</html>
+<script src="https://xyzAI.github.io//media/js/wordshow.js"></script>
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+
+    //-------------------------------------------------搜索
+    // 获取搜索框、搜索按钮、清空搜索、结果输出对应的元素
+    var searchInput = document.querySelector('.search-input');
+    var searchResults = document.querySelector('.search-results');
+
+    // 申明保存文章的标题、链接、内容的数组变量
+    var searchValue = '',
+        arrItems = [],
+        arrLinks = [],
+        arrTitles = [],
+        arrResults = [],
+        indexItem = [],
+        itemLength = 0;
+    var tmpDiv = document.createElement('div');
+    tmpDiv.className = 'result-item';
+
+    // ajax 的兼容写法
+    var xhr = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            xml = xhr.responseXML;
+            arrItems = xml.getElementsByTagName('entry');
+            itemLength = arrItems.length;
+            console.log(arrItems);
+            // 遍历并保存所有文章对应的标题、链接、内容到对应的数组中
+            // 同时过滤掉 HTML 标签
+            for (i = 0; i < itemLength; i++) {
+                var link = arrItems[i].getElementsByTagName('link')[0];
+                arrLinks[i] = link.getAttribute("href");
+                arrTitles[i] = arrItems[i].getElementsByTagName('title')[0].
+                childNodes[0].nodeValue.replace(/<.*?>/g, '');
+            }
+        }
+    }
+
+    // 开始获取根目录下 feed.xml 文件内的数据
+    xhr.open('get', '/atom.xml', true);
+    xhr.send();
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">Proteus元件库常用元件名称及中英对照</h2>
-            <div class="post-date">2019-06-26</div>
+
+    // 输入框内容变化后就开始匹配，可以不用点按钮
+    // 经测试，onkeydown, onchange 等方法效果不太理想，
+    // 存在输入延迟等问题，最后发现触发 input 事件最理想，
+    // 并且可以处理中文输入法拼写的变化
+    searchInput.oninput = function () {
+        setTimeout(searchConfirm, 0);
+    }
+    searchInput.onfocus = function () {
+        searchResults.style.display = 'block';
+    }
+
+    function searchConfirm() {
+        if (searchInput.value == '') {
+            searchResults.style.display = 'none';
+        } else if (searchInput.value.search(/^\s+$/) >= 0) {
+            // 检测输入值全是空白的情况
+            searchInit();
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '请输入有效内容...';
+            searchResults.appendChild(itemDiv);
+        } else {
+            // 合法输入值的情况
+            searchInit();
+            searchValue = searchInput.value;
+            // 在标题、内容中查找
+            searchMatching(arrTitles, searchValue);
+        }
+    }
+
+    // 每次搜索完成后的初始化
+    function searchInit() {
+        arrResults = [];
+        indexItem = [];
+        searchResults.innerHTML = '';
+        searchResults.style.display = 'block';
+    }
+
+    function searchMatching(arr1, input) {
+        // 忽略输入大小写
+        input = new RegExp(input, 'i');
+        // 在所有文章标题、内容中匹配查询值
+        for (i = 0; i < itemLength; i++) {
+            if (arr1[i].search(input) !== -1) {
+                var arr = arr1;
+                indexItem.push(i); // 保存匹配值的索引
+                var indexContent = arr[i].search(input);
+                // 此时 input 为 RegExp 格式 /input/i，转换为原 input 字符串长度
+                var l = input.toString().length - 3;
+                var step = 10;
+
+                // 将匹配到内容的地方进行黄色标记，并包括周围一定数量的文本
+                arrResults.push(arr[i].slice(indexContent - step, indexContent) +
+                    '<mark>' + arr[i].slice(indexContent, indexContent + l) + '</mark>' +
+                    arr[i].slice(indexContent + l, indexContent + l + step));
+            }
+        }
+
+        // 输出总共匹配到的数目
+        var totalDiv = tmpDiv.cloneNode(true);
+        totalDiv.innerHTML = '<b>总匹配：' + indexItem.length + ' 项<hr></b>';
+        searchResults.appendChild(totalDiv);
+
+        // 未匹配到内容的情况
+        if (indexItem.length == 0) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '未匹配到内容...';
+            searchResults.appendChild(itemDiv);
+        }
+
+        // 将所有匹配内容进行组合
+        for (i = 0; i < arrResults.length; i++) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerHTML = '<b>[' + arrTitles[indexItem[i]] +
+                ']</b><p>' + arrResults[i] + "</p><hr />";
+            itemDiv.setAttribute('onclick', 'changeHref(arrLinks[indexItem[' + i + ']])');
+            searchResults.appendChild(itemDiv);
+        }
+    }
+
+    function changeHref(href) {
+        location.href = href;
+    }
+
+    function showqq() {
+        var qq = document.getElementById("qq").innerHTML;
+        if (qq != '')
+            alert("博主的QQ联系方式为：" + qq);
+        else
+            alert("博主暂未设置QQ联系方式");
+    }
+</script></div>
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div id="main" class="col-xs-12 col-sm-7">
+                    <link rel="stylesheet" href="https://xyzAI.github.io//media/css/font-awesome.css">
+<style>
+
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
             
-              <div class="feature-container" style="background-image: url('https://xyzAI.github.io//post-images/proteus-yuan-jian-ku-chang-yong-yuan-jian-ming-cheng-ji-zhong-ying-dui-zhao.jpg')">
-              </div>
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="https://xyzAI.github.io//post-images/proteus-yuan-jian-ku-chang-yong-yuan-jian-ming-cheng-ji-zhong-ying-dui-zhao.jpg" class="postimage" style="cursor:auto">
+            </div>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2019-06-26</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 9 min read</div>
+                <div class="posttag">
+                    
+                </div>
+            </div>
             
-            <div class="post-content">
-              <p>用Proteus画图是个麻烦事，有个中英文原件对照的表就好多了（持续更新，亲测可用）</p>
+            <div id="texttitle" style="text-align: center">
+                <h2>Proteus元件库常用元件名称及中英对照</h2>
+            </div>
+            <div class="text ">
+                <p>用Proteus画图是个麻烦事，有个中英文原件对照的表就好多了（持续更新，亲测可用）</p>
 <!-- more -->
 <h1 id="大致分类"><strong>大致分类</strong></h1>
 <p><strong>1.Analog Ics</strong></p>
@@ -389,44 +587,524 @@ Animated: 可显示充放电电荷电容</p>
 
             </div>
             
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://xyzAI.github.io//post/xiao-du-zhi-neng-yin-xiang-ti-yan">
-                  <h3 class="post-title">
-                    小度智能音箱体验
-                  </h3>
+            <div class="prev-post">
+                上一篇
+                <a href="https://xyzAI.github.io/post/di-cheng-ben-gai-zao-wu-lian-wang-tai-deng/">
+                    低成本改造物联网台灯
                 </a>
-              </div>
+            </div>
             
-
             
-
-          </div>
-
+            <div class="next-post">
+                下一篇
+                <a href="https://xyzAI.github.io/post/xiao-du-zhi-neng-yin-xiang-ti-yan/">
+                    小度智能音箱体验
+                </a>
+            </div>
+            
         </div>
+    </div>
+</body>
+<script>
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
+</script>
+                    <div name="comment" style="background: white">
+                        <div class="commentcontainer">
+                            
+                            <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="toc-container">
+                    <ul class="markdownIt-TOC">
+<li><a href="#%E5%A4%A7%E8%87%B4%E5%88%86%E7%B1%BB"><strong>大致分类</strong></a></li>
+<li><a href="#%E6%9D%82%E9%A1%B9miscellaneous"><strong>杂项(Miscellaneous)</strong></a></li>
+<li><a href="#%E6%97%A0%E5%AD%90%E5%88%86%E7%B1%BB"><strong>无子分类</strong></a></li>
+</ul>
+
+                </div>
+            </div>
+        </div>
+        <div id="bg">
+        </div>
+        <div id="bgurl" style="display:none">\media\images\custom-bgimage.jpg</div>
+    </div>
+    <!-- 响应式布局，针对手机端内容显示 -->
+    <div class="nav-small">
+        <head>
+
+  <!-- 引入Bootstrap核心样式文件 -->
+  <link rel="stylesheet" href="https://xyzAI.github.io//media/css/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">XYZ AI&nbsp;&nbsp;|</a>
       </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          
+          
+          <li>
+            <a href="https://xyzai.github.io/">
+              首页
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="https://xyzAI.github.io//post/about-me/">
+              关于我
+            </a>
+          </li>
+          
+          
+          
+          <li><a href="https://github.com/xyzAI" target="_blank">
+              我的GitHub
+            </a></li>
+          
+          
+          
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- 引入BootStrap核心js文件 -->
+  <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+        <div style="margin-top:30px"></div>
+        <link rel="stylesheet" href="https://xyzAI.github.io//media/css/font-awesome.css">
+<style>
+
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
+            
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="https://xyzAI.github.io//post-images/proteus-yuan-jian-ku-chang-yong-yuan-jian-ming-cheng-ji-zhong-ying-dui-zhao.jpg" class="postimage" style="cursor:auto">
+            </div>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2019-06-26</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 9 min read</div>
+                <div class="posttag">
+                    
+                </div>
+            </div>
+            
+            <div id="texttitle" style="text-align: center">
+                <h2>Proteus元件库常用元件名称及中英对照</h2>
+            </div>
+            <div class="text ">
+                <p>用Proteus画图是个麻烦事，有个中英文原件对照的表就好多了（持续更新，亲测可用）</p>
+<!-- more -->
+<h1 id="大致分类"><strong>大致分类</strong></h1>
+<p><strong>1.Analog Ics</strong></p>
+<p>Amplifier : 放大器</p>
+<p>Comparators: 比较器</p>
+<p>Display Drivers: 显示驱动器</p>
+<p>Filters: 滤波器</p>
+<p>Miscellaneous: 混杂器件</p>
+<p>Regulators: 三端稳压器</p>
+<p>Timers: 555定时器</p>
+<p>Voltage References: 参考电压</p>
+<p><strong>2.Capacitors:</strong><br>
+Animated: 可显示充放电电荷电容</p>
+<p>Audio Grade Axial: 音响专用电容</p>
+<p>Axial Lead polypropene 径向轴引线聚丙烯电容</p>
+<p>Axial Leda polystyrene 径向轴引线聚苯乙烯电容</p>
+<p>Ceramic Disc 陶瓷原片电容</p>
+<p>Decoupling Disc 解耦圆片电容</p>
+<p>Generic 普通电容</p>
+<p>High Temp Radial 高温径向电容</p>
+<p>High temp Axial Electrolytic 高温径向电解电容</p>
+<p>Metallised Polyester Film 金属聚酯膜电容</p>
+<p>Metallised polypropene 金属聚丙烯电容</p>
+<p>Metallised polypropene Film 金属聚丙烯莫电容</p>
+<p>Miniture Electorlytic 微型电解电容</p>
+<p>Multilayer Metallised Polyester Film 多层金属聚酯膜电容</p>
+<p>Mylar Film 聚酯膜电容</p>
+<p>Nicket Barrier 溴删电容</p>
+<p>Non Polarised 无极性电容</p>
+<p>Polyester Layer 聚酯层电容</p>
+<p>Radial Electrolytic 径向电解电容</p>
+<p>Tantalum Bead 树脂浊刻电容</p>
+<p>Variable 可变电容</p>
+<p>VX Axial Electrolytic VX 轴电解电容</p>
+<p><strong>3 .CMOS 4000 series</strong></p>
+<p>Adders 加法器</p>
+<p>buffers&amp;Drivers 缓冲和驱动器</p>
+<p>Comparators 比较器</p>
+<p>Counters 计数器</p>
+<p>Decoders 译码器</p>
+<p>Encoders 编码器</p>
+<p>Flip-Flops&amp;Latches 触发器和锁存器</p>
+<p>Frequency Dividers&amp;Timer 分频和定时器</p>
+<p>Gates &amp; Inverters 门电路和反相器</p>
+<p>Memory 存储器</p>
+<p>Misc.Logic 混杂逻辑电路</p>
+<p>Mutiplexers 数据选择器</p>
+<p>Multivibrators 多谐振荡器</p>
+<p>Phase_Locked Loops(PLL) 锁相环</p>
+<p>Registors 寄存器</p>
+<p><strong>4.Connectors 接头</strong></p>
+<p>Audio 音频接头</p>
+<p>D-Type D型接头</p>
+<p>DIL 双排插座</p>
+<p>Header Blocks 插头</p>
+<p>Miscellaneous 各种接头</p>
+<p>PCB Transfer PCB传输接头</p>
+<p>SIL 单排插座</p>
+<p>Ribbon Cable 蛇皮电缆</p>
+<p>Terminal Blocks 接线端子台</p>
+<p><strong>5.Data Converters 数据转化器</strong></p>
+<p>A/D Converters 模数转换器</p>
+<p>D/A Converters 数模转换器</p>
+<p>Sample &amp;Hold 采样保持器</p>
+<p>Temperature Sensors 温度传感器</p>
+<p><strong>6.Debugging TOOls 调试工具</strong></p>
+<p>Breakpoint Triggers</p>
+<p>Logic Probes</p>
+<p>Logic Stimuli</p>
+<p><strong>7.Diodes 二极管</strong></p>
+<p>Bridge Rectifiers 整流管</p>
+<p>Generic 普通二极管</p>
+<p>Rectifiers 整流二极管</p>
+<p>Schottky 肖特基二极管</p>
+<p>Switching 开关二极管</p>
+<p>Tunnel 隧道二极管</p>
+<p>Varicap 变容二极管</p>
+<p>Zenner 稳压二极管</p>
+<p><strong>8.Inductors 电感</strong></p>
+<p>Generic</p>
+<p>SMT Inductors</p>
+<p>Transformers</p>
+<p><strong>9.Laplace Primitives 拉普拉斯模型</strong></p>
+<p>1st Order</p>
+<p>2nd Order</p>
+<p>Controllers</p>
+<p>Non_Linear</p>
+<p>Operators</p>
+<p>Poles/Zeros</p>
+<p>Symbols</p>
+<p><strong>10.Memory ICs 存储器芯片（包括常用的I2C,SPI芯片）</strong></p>
+<p>Dynamic RAM 动态数据存储器</p>
+<p>EEPROM 电可擦除的</p>
+<p>EPROM 可擦除的</p>
+<p>I2C Memories I2c总线存储器</p>
+<p>Memory Cards 存储卡</p>
+<p>SPI Memories spi总线存储器</p>
+<p>Static RAM 静态数据存储器</p>
+<p>杂类（Miscellananeous)</p>
+<p>电容（Capacitors)</p>
+<p>可动态显示充放电电容（Animated)</p>
+<p>音响专用轴线电容(Audio Grade Axial)</p>
+<p>轴线聚苯烯电容（Axial Lead Polypropene)</p>
+<p>轴线聚苯烯电容（Axial Lead Polystyrene)</p>
+<p>陶瓷圆片电容（Ceramic Disc)</p>
+<p>去耦片状电容（Decoupling Disc)</p>
+<p>普通电容（Generic)</p>
+<p>高温径线电容（High Temp Radial)</p>
+<p>高温径线电解电容（High Temperature Axial Electrolytic)</p>
+<p>金属化聚酯膜电容（Metallised Polyester Film)</p>
+<p>金属化聚烯电容（Metallised Polypropene）</p>
+<p>金属化聚烯膜电容（Metallised Polypropene Film)</p>
+<p>小型电解电容（Miniture Electrolytic)</p>
+<p>多层金属化聚酯膜电容（Multilayer Metallised Polyestern Film)</p>
+<p>聚脂膜电容（Mylar Film)</p>
+<p>镍栅电容（Nickel Barrier)</p>
+<p>无极性电容（Non Polarised)</p>
+<p>聚脂层电容（Polyester Layer)</p>
+<p>径线电解电容（Radial Electrolytic)</p>
+<p>树脂蚀刻电容（Resin Dipped)</p>
+<p>钽珠电容（Tantalum Bead)</p>
+<p>可变电容（Variable)</p>
+<p>VX轴线电解电容（VX Axial Electolytic)</p>
+<p>连接器（Connectors)</p>
+<p>音频接口（Audio)</p>
+<p>D 型接口（D-Type)</p>
+<p>双排插座（DIL)</p>
+<p>插头（Header Blocks)</p>
+<p>PCB转接器（PCB Transfer)</p>
+<p>带线（Ribbon Cable）</p>
+<p>单排插座（SIL)</p>
+<p>连线端子（Terminal Blocks)</p>
+<p>杂类（Miscellananeous)</p>
+<p>数据转换器(Data Converter)</p>
+<p>模/数转换器(A/D converters)</p>
+<p>数/模转换器(D/A converters)</p>
+<p>采样保持器(Sample &amp; Hold)</p>
+<p>温度传感器(Temperature Sensore)</p>
+<p>调试工具(Debugging Tools)</p>
+<p>断点触发器(Breakpoint Triggers)</p>
+<p>逻辑探针(Logic Probes)</p>
+<p>逻辑激励源(Logic Stimuli)</p>
+<p>二极管（Diode)</p>
+<p>整流桥(Bridge Rectifiers)</p>
+<p>普通二极管(Generic)</p>
+<p>整流管(Rectifiers)</p>
+<p>肖特基二极管(Schottky)</p>
+<p>开关管(Switching)</p>
+<p>隧道二极管(Tunnel)</p>
+<p>变容二极管(Varicap)</p>
+<p>齐纳击穿二极管(Zener)</p>
+<p>ECL 10000系列(ECL 10000 Series)<em>各种常用集成电路</em></p>
+<p>机电(Electromechanical)<em>各种直流和步进电机</em></p>
+<p>电感(Inductors)</p>
+<p>普通电感(Generic)</p>
+<p>贴片式电感(SMT Inductors)</p>
+<p>变压器(Transformers)</p>
+<p>拉普拉斯变换(Laplace Primitives)</p>
+<p>一阶模型(1st Order)</p>
+<p>二阶模型(2st Order)</p>
+<p>控制器(Controllers)</p>
+<p>非线性模式(Non-Linear)</p>
+<p>算子(Operators)</p>
+<p>极点/零点(Poles/Zones)</p>
+<p>符号(Symbols)</p>
+<p>存储芯片(Memory Ics)</p>
+<p>动态数据存储器(Dynamic RAM)</p>
+<p>电可擦除可编程存储器(EEPROM)</p>
+<p>可擦除可编程存储器(EPROM)</p>
+<p>I2C总线存储器(I2C Memories)</p>
+<p>SPI总线存储器(SPI Memories)</p>
+<p>存储卡(Memory Cards)</p>
+<p>静态数据存储器(Static Memories)</p>
+<p>微处理器芯片(Microprocess ICs)</p>
+<p>6800 系列(6800 Family)</p>
+<p>8051 系列(8051 Family)</p>
+<p>ARM 系列(ARM Family)</p>
+<p>AVR 系列(AVR Family)</p>
+<p>Parallax 公司微处理器(BASIC Stamp Modules)</p>
+<p>HCF11 系列(HCF11 Family)</p>
+<p>PIC10 系列(PIC10 Family）</p>
+<p>PIC12 系列(PIC12 Family)</p>
+<p>PIC16 系列(PIC16 Family)</p>
+<p>PIC18 系列(PIC18 Family)</p>
+<p>Z80系列(Z80 Family)</p>
+<p>CPU 外设(Peripherals)</p>
+<h1 id="杂项miscellaneous"><strong>杂项(Miscellaneous)</strong></h1>
+<p><strong>含天线、ATA/IDE硬盘驱动模型、单节与多节电池、串行物理接口模型、晶振、动态与通用保险、<br>
+模拟电压与电流符号、交通信号灯</strong></p>
+<p>建模源(Modelling Primitives)</p>
+<p>模拟(仿真分析）(Analogy-SPICE)</p>
+<p>数字(缓冲器与门电路）(Digital--Buffers&amp;Gates)</p>
+<p>数字(杂类)(Digital--Miscellaneous)</p>
+<p>数字(组合电路)(Digital--Combinational)</p>
+<p>数字(时序电路）(Digital--Sequential)</p>
+<p>混合模式(Mixed Mode)</p>
+<p>可编程逻辑器件单元(PLD Elements)</p>
+<p>实时激励源(Realtime Actuators)</p>
+<p>实时指示器(Realtime Indictors)</p>
+<p>运算放大器(Operational Amplifiers)</p>
+<p>单路运放(Single)</p>
+<p>二路运放(Dual)</p>
+<p>三路运放(Triple)</p>
+<p>四路运放(Quad)</p>
+<p>八路运放(Octal)</p>
+<p>理想运放(Ideal)</p>
+<p>大量使用的运放(Macromodel)</p>
+<p>光电子类器件(Optoelectronics)</p>
+<p>七段数码管(7-Segment Displays)</p>
+<p>英文字符与数字符号液晶显示器(Alphanumeric LCDs)</p>
+<p>条形显示器(Bargraph Displays)</p>
+<p>点阵显示屏(Dot Matrix Display)</p>
+<p>图形液晶(Grphical LCDs)</p>
+<p>灯泡(Lamp)</p>
+<p>液晶控制器(LCD Controllers)</p>
+<p>液晶面板显示(LCD Panels Displays)</p>
+<p>发光二极管(LEDs)</p>
+<p>光耦元件(Optocouplers)</p>
+<p>串行液晶(Serial LCDs)</p>
+<p>可编程逻辑电路与现场可编程门阵列(PLD&amp;FPGA)</p>
+<p>电阻(Resistors)</p>
+<p>0.6W金属膜电阻(0.6W Metal Film)</p>
+<p>10W 绕线电阻(10W Wirewound)</p>
+<p>2W 金属膜电阻(2W Metal Film)</p>
+<p>3W 金属膜电阻(3W Metal Film)</p>
+<p>7W 金属膜电阻(7W Metal Film)</p>
+<p>通用电阻符号(Generic)</p>
+<p>高压电阻(High Voltage)</p>
+<p>负温度系数热敏电阻(NTC)</p>
+<p>排阻(Resisters Packs)</p>
+<p>滑动变阻器(Variable)</p>
+<p>可变电阻(Varistors)</p>
+<p>仿真源(Simulator Primitives)</p>
+<p><strong>触发器(Flip-Flop)</strong></p>
+<p>门电路(Gates)</p>
+<p>电源(Sources)</p>
+<p>扬声器与音响设备(Speaker&amp;Sounders)</p>
+<h1 id="无子分类"><strong>无子分类</strong></h1>
+<p>开关与继电器(Switch&amp;Relays)</p>
+<p>键盘(Keypads)</p>
+<p>普通继电器(Generic Relays)</p>
+<p>专用继电器(Specific Relays)</p>
+<p>按键与拨码(Switchs)</p>
+<p>开关器件(Switching Devices)</p>
+<p>双端交流开关元件(DIACs)</p>
+<p>普通开关元件(Generic)</p>
+<p>可控硅(SCRs)</p>
+<p>三端可控硅(TRIACs)</p>
+<p>热阴极电子管(Thermionic Valves)</p>
+<p>二极真空管(Diodes)</p>
+<p>三极真空管(Triodes)</p>
+<p>四极真空管(Tetrodes)</p>
+<p>五极真空管(Pentodes)</p>
+<p>转换器(Transducers)</p>
+<p>压力传感器(Pressures)</p>
+<p>温度传感器(Temperature)</p>
+<p>晶体管(Transistors)</p>
+<p>双极性晶体管(Bipolar)</p>
+<p>普通晶体管(Generic)</p>
+<p>绝缘栅场效应管(IGBY/Insulated Gate Bipolar Transistors）</p>
+<p>结型场效应晶体管(JFET)</p>
+<p>金属-氧化物半导体场效应晶体管(MOSFET)</p>
+<p>射频功率LDMOS晶体管(RF Power LDMOS)</p>
+<p>射频功率VDMOS晶体管(RF Power VDMOS)</p>
+<p>单结晶体管(Unijunction)</p>
+<p>CMOS 4000系列（CMOS 4000 series ）</p>
+<p>TTL 74系列（TTL 74 series ）</p>
+<p>TTL 74增强型低功耗肖特基系列（TTL 74ALS Series）</p>
+<p>TTL 74增强型肖特基系列（TTL 74AS Series）</p>
+<p>TTL 74高速系列(TTL 74F Series)</p>
+<p>TTL 74HC系列/CMOS工作电平(TTL 74HC Series)</p>
+<p>TTL 74HCT系列/TTL工作电平(TTL 74HCTSeries）</p>
+<p>TTL 74低功耗肖特基系列(TTL 74LS Series)</p>
+<p>TTL 74肖特基系列（TTL 74S Series)</p>
+<p>加法器(Adders)</p>
+<p>缓冲器/驱动器(Buffers&amp;Drivers)</p>
+<p>比较器（Comparators)</p>
+<p>计数器(Counters)</p>
+<p>解码器（Decoders)</p>
+<p>编码器(Encoders)</p>
+<p>存储器(Memory)</p>
+<p>触发器/锁存器(Flip-Flop&amp;Latches)</p>
+<p>分频器/定时器(Frequency Dividers &amp; Timers)</p>
+<p>门电路/反相器(Gates&amp;Inverters)</p>
+<p>数据选择器（Multiplexers)</p>
+<p>多谐振荡器(Multivibrators)</p>
+<p>振荡器(Oscillators)</p>
+<p>锁相环(Phrase-Locked-Loop,PLL)</p>
+<p>寄存器(Registers)</p>
+<p>信号开关(Signal Switches)</p>
+<p>收发器(Tranxceivers)</p>
+<p>杂类逻辑芯片(Misc.Logic)</p>
+
+            </div>
+            
+            <div class="prev-post">
+                上一篇
+                <a href="https://xyzAI.github.io/post/di-cheng-ben-gai-zao-wu-lian-wang-tai-deng/">
+                    低成本改造物联网台灯
+                </a>
+            </div>
+            
+            
+            <div class="next-post">
+                下一篇
+                <a href="https://xyzAI.github.io/post/xiao-du-zhi-neng-yin-xiang-ti-yan/">
+                    小度智能音箱体验
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script>
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
+</script>
+        <div name="comment" style="background: white">
+            <div class="commentcontainer">
+                
+                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                
+            </div>
+        </div>
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
+</body>
+<script>
+    hljs.initHighlightingOnLoad()
 </script>
+<script src="https://xyzAI.github.io//media/js/post.js"></script>
 
-
-
-
-  </body>
-</html>
+<script src="https://l2dwidget.js.org//lib/L2Dwidget.min.js"></script>
+<script src="https://xyzAI.github.io//media/js/live2d.js"></script>

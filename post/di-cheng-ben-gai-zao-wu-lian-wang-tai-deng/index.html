@@ -1,99 +1,293 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" >
+<head>
 
-<title>低成本改造物联网台灯 | XYZ AI</title>
-<meta name="description" content="一个人脑AI统治世界">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="晚上，躺在床上玩手机，到了睡觉的时间不想下床关灯。我需要低成本改造家里的非智能台灯。
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+1. 需求
+我的需求很简单，躺在床上，不用下床就可以控制台灯的开关。看了晚上众多物联网产品，最简单的方案就是购买智能插座，接入某个智能家居APP。大概成..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://xyzAI.github.io//media/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/dracula.min.css">
+              
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://xyzAI.github.io//media/css/bootstrap.min.css">
+    <title>XYZ AI</title>
+</head>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://xyzAI.github.io//favicon.ico?v=1576919415739">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://xyzAI.github.io//styles/main.css">
+<body>
+    <!-- 响应式布局，针对PC端内容显示 -->
+    <div id="content">
+        <div class="nav-large">
+            <div class="row">
+                <div class="side"><html>
 
+<head>
+    <link rel="stylesheet" href="https://xyzAI.github.io//styles/main.css">
+    <meta name="description" content="一个人脑AI统治世界" />
+    <title>Document</title>
+</head>
+<style>
+</style>
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
-
-  </head>
-  <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://xyzAI.github.io/">
-        <img src="https://xyzAI.github.io//images/avatar.png?v=1576919415739" class="site-logo">
-        <h1 class="site-title">XYZ AI</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
-      
+<body>
+    <div id=side>
+        <div class="avatar-border">
+            <img src="https://xyzAI.github.io//images/avatar.png?v=1586271502599" class="avatar">
+        </div>
+        <div class="sitename">XYZ AI</div>
+        <span class="describtion" data-text='["一个人脑AI统治世界"]'>&nbsp;</span>
         
-          <a href="https://xyzai.github.io/" class="site-nav">
+        <div class="search">
+            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <div class="search-results"></div>
+        </div>
+        
+    <div class="share-button">
+        <span>Contact</span>
+        
+        
+        
+        
+        
+        
+    </div>
+    <div id="qq" style="display:none"></div>
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://xyzai.github.io/" class="menubutton">
             首页
-          </a>
-        
-      
-        
-          <a href="https://xyzAI.github.io//post/about-me/" class="site-nav">
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://xyzAI.github.io//post/about-me/" class="menubutton">
             关于我
-          </a>
-        
-      
-        
-          <a href="https://github.com/xyzAI" class="site-nav" target="_blank">
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="https://github.com/xyzAI" class="mchocie describtion" target="_blank">
             我的GitHub
-          </a>
-        
-      
+        </a>
     </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
+    
+    
+    
+    <hr>
+    <div id="footinfo">始于2019.6.16 | Theme: Fog</div>
+    <div id="sitegotimeDate">载入天数...</div>
+    <div id="sitegotimes">载入时分秒...</div>
+    <div id="cussitetime" style="display:none">06/16/2019</div>
     </div>
-    <div class="site-description">
-      一个人脑AI统治世界
-    </div>
-    <div class="site-footer">
-      始于2019.6.16 | <a class="rss" href="https://xyzAI.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
+</body>
+
+</html>
+<script src="https://xyzAI.github.io//media/js/wordshow.js"></script>
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+
+    //-------------------------------------------------搜索
+    // 获取搜索框、搜索按钮、清空搜索、结果输出对应的元素
+    var searchInput = document.querySelector('.search-input');
+    var searchResults = document.querySelector('.search-results');
+
+    // 申明保存文章的标题、链接、内容的数组变量
+    var searchValue = '',
+        arrItems = [],
+        arrLinks = [],
+        arrTitles = [],
+        arrResults = [],
+        indexItem = [],
+        itemLength = 0;
+    var tmpDiv = document.createElement('div');
+    tmpDiv.className = 'result-item';
+
+    // ajax 的兼容写法
+    var xhr = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            xml = xhr.responseXML;
+            arrItems = xml.getElementsByTagName('entry');
+            itemLength = arrItems.length;
+            console.log(arrItems);
+            // 遍历并保存所有文章对应的标题、链接、内容到对应的数组中
+            // 同时过滤掉 HTML 标签
+            for (i = 0; i < itemLength; i++) {
+                var link = arrItems[i].getElementsByTagName('link')[0];
+                arrLinks[i] = link.getAttribute("href");
+                arrTitles[i] = arrItems[i].getElementsByTagName('title')[0].
+                childNodes[0].nodeValue.replace(/<.*?>/g, '');
+            }
+        }
+    }
+
+    // 开始获取根目录下 feed.xml 文件内的数据
+    xhr.open('get', '/atom.xml', true);
+    xhr.send();
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">低成本改造物联网台灯</h2>
-            <div class="post-date">2019-07-13</div>
+
+    // 输入框内容变化后就开始匹配，可以不用点按钮
+    // 经测试，onkeydown, onchange 等方法效果不太理想，
+    // 存在输入延迟等问题，最后发现触发 input 事件最理想，
+    // 并且可以处理中文输入法拼写的变化
+    searchInput.oninput = function () {
+        setTimeout(searchConfirm, 0);
+    }
+    searchInput.onfocus = function () {
+        searchResults.style.display = 'block';
+    }
+
+    function searchConfirm() {
+        if (searchInput.value == '') {
+            searchResults.style.display = 'none';
+        } else if (searchInput.value.search(/^\s+$/) >= 0) {
+            // 检测输入值全是空白的情况
+            searchInit();
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '请输入有效内容...';
+            searchResults.appendChild(itemDiv);
+        } else {
+            // 合法输入值的情况
+            searchInit();
+            searchValue = searchInput.value;
+            // 在标题、内容中查找
+            searchMatching(arrTitles, searchValue);
+        }
+    }
+
+    // 每次搜索完成后的初始化
+    function searchInit() {
+        arrResults = [];
+        indexItem = [];
+        searchResults.innerHTML = '';
+        searchResults.style.display = 'block';
+    }
+
+    function searchMatching(arr1, input) {
+        // 忽略输入大小写
+        input = new RegExp(input, 'i');
+        // 在所有文章标题、内容中匹配查询值
+        for (i = 0; i < itemLength; i++) {
+            if (arr1[i].search(input) !== -1) {
+                var arr = arr1;
+                indexItem.push(i); // 保存匹配值的索引
+                var indexContent = arr[i].search(input);
+                // 此时 input 为 RegExp 格式 /input/i，转换为原 input 字符串长度
+                var l = input.toString().length - 3;
+                var step = 10;
+
+                // 将匹配到内容的地方进行黄色标记，并包括周围一定数量的文本
+                arrResults.push(arr[i].slice(indexContent - step, indexContent) +
+                    '<mark>' + arr[i].slice(indexContent, indexContent + l) + '</mark>' +
+                    arr[i].slice(indexContent + l, indexContent + l + step));
+            }
+        }
+
+        // 输出总共匹配到的数目
+        var totalDiv = tmpDiv.cloneNode(true);
+        totalDiv.innerHTML = '<b>总匹配：' + indexItem.length + ' 项<hr></b>';
+        searchResults.appendChild(totalDiv);
+
+        // 未匹配到内容的情况
+        if (indexItem.length == 0) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '未匹配到内容...';
+            searchResults.appendChild(itemDiv);
+        }
+
+        // 将所有匹配内容进行组合
+        for (i = 0; i < arrResults.length; i++) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerHTML = '<b>[' + arrTitles[indexItem[i]] +
+                ']</b><p>' + arrResults[i] + "</p><hr />";
+            itemDiv.setAttribute('onclick', 'changeHref(arrLinks[indexItem[' + i + ']])');
+            searchResults.appendChild(itemDiv);
+        }
+    }
+
+    function changeHref(href) {
+        location.href = href;
+    }
+
+    function showqq() {
+        var qq = document.getElementById("qq").innerHTML;
+        if (qq != '')
+            alert("博主的QQ联系方式为：" + qq);
+        else
+            alert("博主暂未设置QQ联系方式");
+    }
+</script></div>
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div id="main" class="col-xs-12 col-sm-7">
+                    <link rel="stylesheet" href="https://xyzAI.github.io//media/css/font-awesome.css">
+<style>
+
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
             
-              <div class="feature-container" style="background-image: url('https://xyzAI.github.io//post-images/di-cheng-ben-gai-zao-wu-lian-wang-tai-deng.jfif')">
-              </div>
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="https://xyzAI.github.io//post-images/di-cheng-ben-gai-zao-wu-lian-wang-tai-deng.jfif" class="postimage" style="cursor:auto">
+            </div>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2019-07-13</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 5 min read</div>
+                <div class="posttag">
+                    
+                </div>
+            </div>
             
-            <div class="post-content">
-              <p>晚上，躺在床上玩手机，到了睡觉的时间不想下床关灯。我需要低成本改造家里的非智能台灯。</p>
+            <div id="texttitle" style="text-align: center">
+                <h2>低成本改造物联网台灯</h2>
+            </div>
+            <div class="text ">
+                <p>晚上，躺在床上玩手机，到了睡觉的时间不想下床关灯。我需要低成本改造家里的非智能台灯。</p>
 <!-- more -->
 <h1 id="1-需求">1. 需求</h1>
 <p>我的需求很简单，躺在床上，不用下床就可以控制台灯的开关。看了晚上众多物联网产品，最简单的方案就是购买智能插座，接入某个智能家居APP。大概成本至少得30元。而且还需要组建家庭网关，等这一套都置办下来得不少钱。而我对于其他的智能家居产品并不感冒，只想安安静静的拥有一个可以控制的台灯。以小米为例，软件还充斥各种广告，还有泄漏我个人隐私的嫌疑。</p>
@@ -105,11 +299,11 @@
 2.WIFI：手机连接家里路由器，台灯也接入家里的路由器，通过访问IP来操控台灯。</p>
 <p>苹果设备蓝牙有着一言难尽的苦，而且蓝牙控制范围窄，WIFI成了首选。而且将来如果需要，还可以接入网络，达到远程操控的目的</p>
 <h1 id="4-材料">4. 材料</h1>
-<p>核心部件选择ESP8266，就是那个被很多人买来用做WIFI探针的东西。<img src="https://xyzAI.github.io//post-images/1563005675934.jpg" alt=""></p>
+<p>核心部件选择ESP8266，就是那个被很多人买来用做WIFI探针的东西。<img src="https://xyzAI.github.io//post-images/1563005675934.jpg" alt="" loading="lazy"></p>
 <p>由于手头没有焊接设备，也没有工具。于是直接购买了开发板。也省了不少事。</p>
-<p>然后就是继电器，通过8266控制继电器来操控台灯通断，实现起来应该会很简单<img src="https://xyzAI.github.io//post-images/1563005835083.jpg" alt="">只买了一路继电器，目前还没有想法接入多路设备。</p>
+<p>然后就是继电器，通过8266控制继电器来操控台灯通断，实现起来应该会很简单<img src="https://xyzAI.github.io//post-images/1563005835083.jpg" alt="" loading="lazy">只买了一路继电器，目前还没有想法接入多路设备。</p>
 <h1 id="5-给esp8266编程">5. 给ESP8266编程</h1>
-<p>由于买的是开发板，很多事都省了，可以直接用arduino IDE写程序，只要装好arduinoIDE的库就可以了。至于库文件网络上有，商家也会提供。然后按照自己买的板子的型号配置好软件<img src="https://xyzAI.github.io//post-images/1563006273322.png" alt=""><br>
+<p>由于买的是开发板，很多事都省了，可以直接用arduino IDE写程序，只要装好arduinoIDE的库就可以了。至于库文件网络上有，商家也会提供。然后按照自己买的板子的型号配置好软件<img src="https://xyzAI.github.io//post-images/1563006273322.png" alt="" loading="lazy"><br>
 代码开源如下</p>
 <pre><code>#include &lt;ESP8266WiFi.h&gt;
 #include &lt;WiFiClient.h&gt;
@@ -174,62 +368,353 @@ msg += &quot;&lt;/body&gt;&lt;/html&gt;&quot;;
 server.send(200, &quot;text/html&quot;, msg);}
 </code></pre>
 <p>这样先打开串口监视器，可以看见路由器给你esp开发板分配的IP，然后记下来这串ip，用浏览器打开。<br>
-<img src="https://xyzAI.github.io//post-images/1563006640119.jpg" alt=""><br>
+<img src="https://xyzAI.github.io//post-images/1563006640119.jpg" alt="" loading="lazy"><br>
 可以看到按键了，只要点击就好了。</p>
 <h1 id="6-接入siri">6. 接入Siri</h1>
 <p>iOS12的捷径是个好东西，用捷径可以让Siri有更多可玩性。代码中，只要给a=1和a=0就能操控继电器了，那么只要把之前我们记下来的IP地址稍微改一下<br>
-<img src="https://xyzAI.github.io//post-images/1563006897102.jpg" alt=""></p>
+<img src="https://xyzAI.github.io//post-images/1563006897102.jpg" alt="" loading="lazy"></p>
 <h1 id="大概这样一个是1一个是0-把这俩网址都保存到safari浏览器给他们起好名字"><strong>大概这样，一个是1，一个是0。把这俩网址都保存到safari浏览器，给他们起好名字</strong></h1>
-<figure data-type="image" tabindex="1"><img src="https://xyzAI.github.io//post-images/1563006999012.png" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://xyzAI.github.io//post-images/1563006999012.png" alt="" loading="lazy"></figure>
 <h1 id="然后打开设置点击siri与搜索点击所有快捷指令"><strong>然后打开设置，点击Siri与搜索，点击所有快捷指令</strong></h1>
-<figure data-type="image" tabindex="2"><img src="https://xyzAI.github.io//post-images/1563007102446.png" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="https://xyzAI.github.io//post-images/1563007102446.png" alt="" loading="lazy"></figure>
 <h1 id="向下滑找到safari浏览器然后就能看见刚刚保存的那两个网页了给他们录入语言指令就可以了"><strong>向下滑找到safari浏览器，然后就能看见刚刚保存的那两个网页了，给他们录入语言指令就可以了。</strong></h1>
-<figure data-type="image" tabindex="3"><img src="https://xyzAI.github.io//post-images/1563007260216.jpg" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="https://xyzAI.github.io//post-images/1563007260216.jpg" alt="" loading="lazy"></figure>
 <h1 id="接下来就能躺在床上优雅的叫siri帮你关灯了">接下来就能躺在床上，优雅的叫Siri帮你关灯了！！！</h1>
 <h1 id="成果图"><strong>成果图</strong></h1>
-<p><img src="https://xyzAI.github.io//post-images/1563007392448.JPG" alt=""><br>
-<img src="https://xyzAI.github.io//post-images/1563007598724.JPG" alt=""></p>
+<p><img src="https://xyzAI.github.io//post-images/1563007392448.JPG" alt="" loading="lazy"><br>
+<img src="https://xyzAI.github.io//post-images/1563007598724.JPG" alt="" loading="lazy"></p>
 
             </div>
             
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://xyzAI.github.io//post/proteus-yuan-jian-ku-chang-yong-yuan-jian-ming-cheng-ji-zhong-ying-dui-zhao">
-                  <h3 class="post-title">
-                    Proteus元件库常用元件名称及中英对照
-                  </h3>
+            <div class="prev-post">
+                上一篇
+                <a href="https://xyzAI.github.io/post/di-cheng-ben-gai-zao-tai-deng-xu-ji/">
+                    低成本改造台灯（续集）
                 </a>
-              </div>
+            </div>
             
-
             
-
-          </div>
-
+            <div class="next-post">
+                下一篇
+                <a href="https://xyzAI.github.io/post/proteus-yuan-jian-ku-chang-yong-yuan-jian-ming-cheng-ji-zhong-ying-dui-zhao/">
+                    Proteus元件库常用元件名称及中英对照
+                </a>
+            </div>
+            
         </div>
+    </div>
+</body>
+<script>
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
+</script>
+                    <div name="comment" style="background: white">
+                        <div class="commentcontainer">
+                            
+                            <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="toc-container">
+                    <ul class="markdownIt-TOC">
+<li><a href="#1-%E9%9C%80%E6%B1%82">1. 需求</a></li>
+<li><a href="#2-%E6%89%8B%E5%A4%B4%E7%9A%84%E8%AE%BE%E5%A4%87">2. 手头的设备</a></li>
+<li><a href="#3-diy%E5%BC%80%E5%A7%8B">3. DIY开始</a></li>
+<li><a href="#4-%E6%9D%90%E6%96%99">4. 材料</a></li>
+<li><a href="#5-%E7%BB%99esp8266%E7%BC%96%E7%A8%8B">5. 给ESP8266编程</a></li>
+<li><a href="#6-%E6%8E%A5%E5%85%A5siri">6. 接入Siri</a></li>
+<li><a href="#%E5%A4%A7%E6%A6%82%E8%BF%99%E6%A0%B7%E4%B8%80%E4%B8%AA%E6%98%AF1%E4%B8%80%E4%B8%AA%E6%98%AF0-%E6%8A%8A%E8%BF%99%E4%BF%A9%E7%BD%91%E5%9D%80%E9%83%BD%E4%BF%9D%E5%AD%98%E5%88%B0safari%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BB%99%E4%BB%96%E4%BB%AC%E8%B5%B7%E5%A5%BD%E5%90%8D%E5%AD%97"><strong>大概这样，一个是1，一个是0。把这俩网址都保存到safari浏览器，给他们起好名字</strong></a></li>
+<li><a href="#%E7%84%B6%E5%90%8E%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE%E7%82%B9%E5%87%BBsiri%E4%B8%8E%E6%90%9C%E7%B4%A2%E7%82%B9%E5%87%BB%E6%89%80%E6%9C%89%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4"><strong>然后打开设置，点击Siri与搜索，点击所有快捷指令</strong></a></li>
+<li><a href="#%E5%90%91%E4%B8%8B%E6%BB%91%E6%89%BE%E5%88%B0safari%E6%B5%8F%E8%A7%88%E5%99%A8%E7%84%B6%E5%90%8E%E5%B0%B1%E8%83%BD%E7%9C%8B%E8%A7%81%E5%88%9A%E5%88%9A%E4%BF%9D%E5%AD%98%E7%9A%84%E9%82%A3%E4%B8%A4%E4%B8%AA%E7%BD%91%E9%A1%B5%E4%BA%86%E7%BB%99%E4%BB%96%E4%BB%AC%E5%BD%95%E5%85%A5%E8%AF%AD%E8%A8%80%E6%8C%87%E4%BB%A4%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86"><strong>向下滑找到safari浏览器，然后就能看见刚刚保存的那两个网页了，给他们录入语言指令就可以了。</strong></a></li>
+<li><a href="#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%B0%B1%E8%83%BD%E8%BA%BA%E5%9C%A8%E5%BA%8A%E4%B8%8A%E4%BC%98%E9%9B%85%E7%9A%84%E5%8F%ABsiri%E5%B8%AE%E4%BD%A0%E5%85%B3%E7%81%AF%E4%BA%86">接下来就能躺在床上，优雅的叫Siri帮你关灯了！！！</a></li>
+<li><a href="#%E6%88%90%E6%9E%9C%E5%9B%BE"><strong>成果图</strong></a></li>
+</ul>
+
+                </div>
+            </div>
+        </div>
+        <div id="bg">
+        </div>
+        <div id="bgurl" style="display:none">\media\images\custom-bgimage.jpg</div>
+    </div>
+    <!-- 响应式布局，针对手机端内容显示 -->
+    <div class="nav-small">
+        <head>
+
+  <!-- 引入Bootstrap核心样式文件 -->
+  <link rel="stylesheet" href="https://xyzAI.github.io//media/css/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">XYZ AI&nbsp;&nbsp;|</a>
       </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          
+          
+          <li>
+            <a href="https://xyzai.github.io/">
+              首页
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="https://xyzAI.github.io//post/about-me/">
+              关于我
+            </a>
+          </li>
+          
+          
+          
+          <li><a href="https://github.com/xyzAI" target="_blank">
+              我的GitHub
+            </a></li>
+          
+          
+          
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- 引入BootStrap核心js文件 -->
+  <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+        <div style="margin-top:30px"></div>
+        <link rel="stylesheet" href="https://xyzAI.github.io//media/css/font-awesome.css">
+<style>
+
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
+            
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="https://xyzAI.github.io//post-images/di-cheng-ben-gai-zao-wu-lian-wang-tai-deng.jfif" class="postimage" style="cursor:auto">
+            </div>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2019-07-13</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 5 min read</div>
+                <div class="posttag">
+                    
+                </div>
+            </div>
+            
+            <div id="texttitle" style="text-align: center">
+                <h2>低成本改造物联网台灯</h2>
+            </div>
+            <div class="text ">
+                <p>晚上，躺在床上玩手机，到了睡觉的时间不想下床关灯。我需要低成本改造家里的非智能台灯。</p>
+<!-- more -->
+<h1 id="1-需求">1. 需求</h1>
+<p>我的需求很简单，躺在床上，不用下床就可以控制台灯的开关。看了晚上众多物联网产品，最简单的方案就是购买智能插座，接入某个智能家居APP。大概成本至少得30元。而且还需要组建家庭网关，等这一套都置办下来得不少钱。而我对于其他的智能家居产品并不感冒，只想安安静静的拥有一个可以控制的台灯。以小米为例，软件还充斥各种广告，还有泄漏我个人隐私的嫌疑。</p>
+<h1 id="2-手头的设备">2. 手头的设备</h1>
+<p>目前我手头的设备以苹果系为主，因此，我还是希望能用siri来控制台灯的。但是查询homekite的产品线并不全，而且还十分的昂贵。果断放弃所有直接购买的念头，还是决定自己diy。</p>
+<h1 id="3-diy开始">3. DIY开始</h1>
+<p>作为物联网设备，如何接入网络是首先考虑的事情。目前阶段的想法有两条</p>
+<p>1.蓝牙：手机通过蓝牙链接台灯，控制台灯。<br>
+2.WIFI：手机连接家里路由器，台灯也接入家里的路由器，通过访问IP来操控台灯。</p>
+<p>苹果设备蓝牙有着一言难尽的苦，而且蓝牙控制范围窄，WIFI成了首选。而且将来如果需要，还可以接入网络，达到远程操控的目的</p>
+<h1 id="4-材料">4. 材料</h1>
+<p>核心部件选择ESP8266，就是那个被很多人买来用做WIFI探针的东西。<img src="https://xyzAI.github.io//post-images/1563005675934.jpg" alt="" loading="lazy"></p>
+<p>由于手头没有焊接设备，也没有工具。于是直接购买了开发板。也省了不少事。</p>
+<p>然后就是继电器，通过8266控制继电器来操控台灯通断，实现起来应该会很简单<img src="https://xyzAI.github.io//post-images/1563005835083.jpg" alt="" loading="lazy">只买了一路继电器，目前还没有想法接入多路设备。</p>
+<h1 id="5-给esp8266编程">5. 给ESP8266编程</h1>
+<p>由于买的是开发板，很多事都省了，可以直接用arduino IDE写程序，只要装好arduinoIDE的库就可以了。至于库文件网络上有，商家也会提供。然后按照自己买的板子的型号配置好软件<img src="https://xyzAI.github.io//post-images/1563006273322.png" alt="" loading="lazy"><br>
+代码开源如下</p>
+<pre><code>#include &lt;ESP8266WiFi.h&gt;
+#include &lt;WiFiClient.h&gt;
+#include &lt;ESP8266WebServer.h&gt;
+#include &lt;ESP8266mDNS.h&gt;
+
+const char* ssid = &quot;你家路由器WIFI名称&quot;;
+const char* password = &quot;WIFI密码&quot;;
+const int relayPin =D0;
+
+ESP8266WebServer server(80);
+
+void setup() {
+
+pinMode(relayPin, OUTPUT);
+
+Serial.begin(9600);
+
+connectToWiFi();
+
+server.on(&quot;/&quot;, handleRoot);
+server.begin();
+Serial.println(&quot;HTTP server started&quot;);}
+
+void loop() {
+
+server.handleClient();}
+
+void connectToWiFi() {
+
+Serial.print(&quot;\n\nConnecting to &quot;);
+Serial.println(ssid);
+
+WiFi.begin(ssid, password);
+
+while (WiFi.status() != WL_CONNECTED) {
+delay(500);
+Serial.print(&quot;.&quot;);}
+
+Serial.println(&quot;\nWiFi connected&quot;);  //串口监视器中显示的信息
+Serial.print(&quot;IP address: &quot;);  //串口监视器中显示IP地址
+Serial.println(WiFi.localIP());}
+
+void handleRoot() {
+
+Serial.println(&quot;Got a Request&quot;);
+
+if (server.arg(0)[0] == '1') {
+digitalWrite(relayPin, HIGH);}
+
+else 
+{
+digitalWrite(relayPin, LOW);}
+String msg = &quot;&quot;;
+
+msg += &quot;&lt;html&gt;&lt;body&gt;\n&quot;;  //此部分为浏览器上显示的信息，可根据实际修改美化
+msg += &quot;&lt;h1&gt;MYE LED&lt;/h1&gt;&quot;;
+msg += &quot;&lt;h2&gt;&lt;a href='?a=1'/&gt;On&lt;/a&gt;&lt;/h2&gt;&quot;;  //开启
+msg += &quot;&lt;h2&gt;&lt;a href='?a=0'/&gt;Off&lt;/a&gt;&lt;/h2&gt;&quot;; //关闭
+msg += &quot;&lt;/body&gt;&lt;/html&gt;&quot;;
+
+server.send(200, &quot;text/html&quot;, msg);}
+</code></pre>
+<p>这样先打开串口监视器，可以看见路由器给你esp开发板分配的IP，然后记下来这串ip，用浏览器打开。<br>
+<img src="https://xyzAI.github.io//post-images/1563006640119.jpg" alt="" loading="lazy"><br>
+可以看到按键了，只要点击就好了。</p>
+<h1 id="6-接入siri">6. 接入Siri</h1>
+<p>iOS12的捷径是个好东西，用捷径可以让Siri有更多可玩性。代码中，只要给a=1和a=0就能操控继电器了，那么只要把之前我们记下来的IP地址稍微改一下<br>
+<img src="https://xyzAI.github.io//post-images/1563006897102.jpg" alt="" loading="lazy"></p>
+<h1 id="大概这样一个是1一个是0-把这俩网址都保存到safari浏览器给他们起好名字"><strong>大概这样，一个是1，一个是0。把这俩网址都保存到safari浏览器，给他们起好名字</strong></h1>
+<figure data-type="image" tabindex="1"><img src="https://xyzAI.github.io//post-images/1563006999012.png" alt="" loading="lazy"></figure>
+<h1 id="然后打开设置点击siri与搜索点击所有快捷指令"><strong>然后打开设置，点击Siri与搜索，点击所有快捷指令</strong></h1>
+<figure data-type="image" tabindex="2"><img src="https://xyzAI.github.io//post-images/1563007102446.png" alt="" loading="lazy"></figure>
+<h1 id="向下滑找到safari浏览器然后就能看见刚刚保存的那两个网页了给他们录入语言指令就可以了"><strong>向下滑找到safari浏览器，然后就能看见刚刚保存的那两个网页了，给他们录入语言指令就可以了。</strong></h1>
+<figure data-type="image" tabindex="3"><img src="https://xyzAI.github.io//post-images/1563007260216.jpg" alt="" loading="lazy"></figure>
+<h1 id="接下来就能躺在床上优雅的叫siri帮你关灯了">接下来就能躺在床上，优雅的叫Siri帮你关灯了！！！</h1>
+<h1 id="成果图"><strong>成果图</strong></h1>
+<p><img src="https://xyzAI.github.io//post-images/1563007392448.JPG" alt="" loading="lazy"><br>
+<img src="https://xyzAI.github.io//post-images/1563007598724.JPG" alt="" loading="lazy"></p>
+
+            </div>
+            
+            <div class="prev-post">
+                上一篇
+                <a href="https://xyzAI.github.io/post/di-cheng-ben-gai-zao-tai-deng-xu-ji/">
+                    低成本改造台灯（续集）
+                </a>
+            </div>
+            
+            
+            <div class="next-post">
+                下一篇
+                <a href="https://xyzAI.github.io/post/proteus-yuan-jian-ku-chang-yong-yuan-jian-ming-cheng-ji-zhong-ying-dui-zhao/">
+                    Proteus元件库常用元件名称及中英对照
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script>
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
+</script>
+        <div name="comment" style="background: white">
+            <div class="commentcontainer">
+                
+                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                
+            </div>
+        </div>
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
+</body>
+<script>
+    hljs.initHighlightingOnLoad()
 </script>
+<script src="https://xyzAI.github.io//media/js/post.js"></script>
 
-
-
-
-  </body>
-</html>
+<script src="https://l2dwidget.js.org//lib/L2Dwidget.min.js"></script>
+<script src="https://xyzAI.github.io//media/js/live2d.js"></script>
